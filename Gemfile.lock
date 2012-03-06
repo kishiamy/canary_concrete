@@ -69,6 +69,12 @@ GEM
       thor (~> 0.14.6)
     guard-rspec (0.6.0)
       guard (>= 0.10.0)
+    haml (3.1.4)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     hike (1.2.1)
     i18n (0.6.0)
     journey (1.0.3)
@@ -142,9 +148,6 @@ GEM
       ffi (~> 1.0)
       multi_json (~> 1.0)
       rubyzip
-    simple_form (2.0.1)
-      actionpack (~> 3.0)
-      activemodel (~> 3.0)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -178,11 +181,12 @@ DEPENDENCIES
   devise
   factory_girl_rails
   guard-rspec
+  haml
+  haml-rails
   jquery-rails
   mysql2
   rails (= 3.2.2)
   rspec-rails
   sass-rails (~> 3.2.3)
-  simple_form
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
