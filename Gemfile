@@ -1,9 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.2'
-gem "haml"
-gem "haml-rails"
-gem "simple_form"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -21,15 +18,21 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem "twitter-bootstrap-rails"
+  gem 'bootstrap-generators'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-
+  gem 'less-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
 gem 'jquery-rails'
+#Autenticacion sistem 
 gem "devise" 
+#views format
+gem "haml"
+gem "haml-rails"
+#forms engine
+gem "simple_form"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

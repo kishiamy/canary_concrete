@@ -1,0 +1,25 @@
+.page-header
+  = link_to new_page_path, :class => 'btn btn-primary' do
+    %i.icon-plus.icon-white
+    New Page
+  %h1 Listing pages
+
+%table.table.table-bordered.table-striped
+  %thead
+    %tr
+      %th Title
+      %th Content
+      %th Page
+      %th Actions
+
+  %tbody
+    - @pages.each do |page|
+      %tr
+        %td= link_to page.title, page 
+        %td= page.content
+        %td= page.page_id
+        %td
+          = link_to edit_page_path(page), :class => 'btn btn-primary' do
+            %i.icon-pencil.icon-white
+            Edit
+          = link_to tag(:i,:class =>'icon-trash icon-white'), page, :class => 'btn btn-danger',:confirm => 'Are you sure?', :method => :delete

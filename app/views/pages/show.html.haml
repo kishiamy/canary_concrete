@@ -1,0 +1,6 @@
+.page-header
+  = link_to edit_page_path(@page), :class => 'btn btn-primary' do
+    %i.icon-pencil.icon-white
+    Edit
+  %h1= @page.title
+= @page.content
