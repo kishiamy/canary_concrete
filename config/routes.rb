@@ -1,6 +1,8 @@
 CanaryConcrete::Application.routes.draw do
-  resources :groups
+  resources :groups 
   devise_for :users
+  match "admin/groups" => "admin#manage_groups", :as => :user_list
+  match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -51,7 +53,7 @@ CanaryConcrete::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'Users#sign_in'
+   root :to => 'groups#index'
 
   # See how all your routes lay out with "rake routes"
 
