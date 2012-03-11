@@ -6,7 +6,7 @@ describe Group do
     @group = Factory(:group)
   end
   it "checking if user belongs to group" do
-    @group.user << @admin
+    @user.group << @admin			 #AQUI ES DONDE PETA
     @user.group.should be(@group)
   end
 end
