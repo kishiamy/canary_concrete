@@ -1,6 +1,10 @@
-.page-header
-  = link_to edit_page_path(@page), :class => 'btn btn-primary' do
-    %i.icon-pencil.icon-white
-    Edit
-  %h1= @page.title
-= @page.content
+.row
+  .span4
+    -@page.pages.each do |p|
+      = link_to p.title, page_path(p)
+  .span8
+    .page-header
+      = link_to edit_page_path(@page), :class => 'btn btn-primary' do
+        %i.icon-pencil.icon-white
+        Edit
+    %p= @page.content

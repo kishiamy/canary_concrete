@@ -22,4 +22,6 @@
           = link_to edit_page_path(page), :class => 'btn btn-primary' do
             %i.icon-pencil.icon-white
             Edit
-          = link_to tag(:i,:class =>'icon-trash icon-white'), page, :class => 'btn btn-danger',:confirm => 'Are you sure?', :method => :delete
+          = link_to page, :class => 'btn btn-danger',:confirm => 'Are you sure?', :method => :delete do
+            %i{:class =>'icon-trash icon-white'} 
+            Delete
