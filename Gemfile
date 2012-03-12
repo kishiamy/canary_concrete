@@ -10,7 +10,7 @@ gem "simple_form"
 gem 'mysql2'
  gem "rspec-rails", :group => [:test, :development]
 group :test do
-  gem "factory_girl_rails"
+  gem "factory_girl"
   gem "capybara"
   gem "guard-rspec"
 end
