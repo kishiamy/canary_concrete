@@ -1,17 +1,11 @@
 FactoryGirl.define do
   factory :user do
-    email "user@example.com"
     password "secret"
-#  f.sequence(:email) { |n| "#{n}@example.com" }
-#  f.password "secret"
+    sequence (:email) {|n| "person#{n}@example.com"}
   end
   
-  factory :user, :group => :user do
-    admin true
+  factory :group do
+    name "admin"
   end
 end
 
-FactoryGirl.define Group do 
-#  factory group do
-    name "admins"
-end

@@ -1,4 +1,5 @@
 class AdminController < ApplicationController
+  before_filter :is_admin  
    
   def manage_groups
     @users = User.all

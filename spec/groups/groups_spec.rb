@@ -7,10 +7,11 @@ describe Group do
   end
 
   it "checking if user belongs to group" do
-    @admin.group << @group	
+    @admin.group = @group	
     @admin.save
     @admin.group.should be(@group)
   end
+
 end
 
 

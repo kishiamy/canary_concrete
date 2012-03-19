@@ -10,7 +10,7 @@ gem "simple_form"
 gem 'mysql2'
  gem "rspec-rails", :group => [:test, :development]
 group :test do
-  gem "factory_girl"
+  gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
 end
@@ -43,4 +43,4 @@ gem "devise"
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'ruby-debug19', :require => 'ruby-debug'
