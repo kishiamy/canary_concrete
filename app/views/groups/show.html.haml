@@ -1,6 +1,15 @@
-%p
-  %b Name:
+%h1
+  Group name: 
   = @group.name
-= link_to 'Edit', edit_group_path(@group)
+%table
+  %tr
+    %th users
+    %th
+    %th
+    %th
+  - @group.users.each do |user|
+    %tr
+      %td= user.email
+= link_to 'Edit group name', edit_group_path(@group)
 |
-\#{link_to 'Back', groups_path}
+\#{link_to 'groups list', groups_path}
