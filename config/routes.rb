@@ -1,5 +1,8 @@
 CanaryConcrete::Application.routes.draw do
+
   resources :groups 
+  resources :pages
+
   devise_for :users
   match "admin/groups" => "admin#manage_groups", :as => :user_list
   match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
@@ -53,7 +56,10 @@ CanaryConcrete::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
+
    root :to => 'groups#index'
+#####################################FRAI   root :to => 'pages#index'
+
 
   # See how all your routes lay out with "rake routes"
 

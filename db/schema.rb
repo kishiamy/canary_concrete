@@ -11,10 +11,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20120319185122) do
 
   create_table "groups", :force => true do |t|
     t.string   "name"
+=======
+ActiveRecord::Schema.define(:version => 20120308023138) do
+
+  create_table "pages", :force => true do |t|
+    t.string   "title"
+    t.text     "content"
+    t.integer  "page_id"
+>>>>>>> master
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
