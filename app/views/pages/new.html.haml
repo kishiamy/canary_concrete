@@ -1,0 +1,9 @@
+.row-fluid
+  .content
+    .page-header
+      = link_to pages_path, :class => 'btn' do
+        %i.icon-list-alt
+        List of pages
+      %h1 New page
+
+    = render 'form'
