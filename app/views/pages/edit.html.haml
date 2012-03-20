@@ -1,10 +1,12 @@
-.page-header
-  = link_to pages_path, :class => 'btn' do
-    %i.icon-list-alt
-    Back
-  = link_to @page, :class => 'btn btn-primary' do
-    %i.icon-info-sign.icon-white
-    Show
-  %h1 Editing page
+.row-fluid
+  .content
+    .page-header
+      = link_to pages_path, :class => 'btn' do
+        %i.icon-list-alt
+        List all pages
+      = link_to @page, :class => 'btn btn-primary' do
+        %i.icon-info-sign.icon-white
+        Show
+      %h1 Editing page
 
-= render 'form'
+    = render 'form'

@@ -1,10 +1,11 @@
-= simple_form_for(@page, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
-  = f.error_notification
+.span12
+  = simple_form_for(@page, :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
+    = f.error_notification
 
-  .form-inputs
-    = f.input :title
-    = f.input :content
-    = f.association :page
+    .form-inputs
+      = f.input :title
+      = f.input :content
+      = f.association :page
 
-  .form-actions
-    = f.button :submit, :class => "btn-primary"
+    .form-actions.control-group
+      = f.button :submit, :class => "btn-primary"

@@ -7,9 +7,6 @@
 // GLOBAL VALUES
 // --------------------------------------------------
 
-// Links
-$linkColor:             #08c !default;
-$linkColorHover:        darken($linkColor, 15%) !default;
 
 // Grays
 $black:                 #000 !default;
@@ -29,12 +26,19 @@ $yellow:                #ffc40d !default;
 $orange:                #f89406 !default;
 $pink:                  #c3325f !default;
 $purple:                #7a43b6 !default;
+$sky-blue:              #5e87af !default;
+$deep-blue-sea:         #1a4c7e !default;
 
 // Typography
-$baseFontSize:          13px !default;
+$baseFontSize:          18px !default;
 $baseFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif !default;
 $baseLineHeight:        18px !default;
-$textColor:             $grayDark !default;
+$textColor:             $white !default;
+$title-text:            48px !default;
+// Links
+// $linkColor:             #08c !default;
+$linkColor:             $deep-blue-sea !default;
+$linkColorHover:        darken($linkColor, 15%) !default;
 
 // Buttons
 $primaryButtonBackground:    $linkColor !default;
@@ -90,10 +94,18 @@ $infoBorder:              darken(adjust-hue($infoBackground, -10), 7%) !default;
 
 // Default 940px grid
 $gridColumns:             12 !default;
-$gridColumnWidth:         60px !default;
+// $gridColumnWidth:         60px !default;
+$gridColumnWidth:         65px !default;
+// $gridGutterWidth:         20px !default;
 $gridGutterWidth:         20px !default;
 $gridRowWidth:            ($gridColumns * $gridColumnWidth) + ($gridGutterWidth * ($gridColumns - 1));
 
 // Fluid grid
-$fluidGridColumnWidth:    6.382978723% !default;
+// $fluidGridColumnWidth:    6.382978723% !default;
+$fluidGridColumnWidth:    5.89198036% !default;
 $fluidGridGutterWidth:    2.127659574% !default;
+
+// Tables
+
+$tableBackgroundHover:    transparent !important;
+$tableBackgroundAccent:   transparent !important;

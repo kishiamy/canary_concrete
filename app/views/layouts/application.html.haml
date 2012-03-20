@@ -15,9 +15,10 @@
     = csrf_meta_tags
   %body
     .container
+      %header
       %ul.nav.nav-pills
         %li
-          =link_to Page.first.title, Page.first
+          =link_to Page.first.try("title"), Page.first
         %li
           %a{:href => "#about"} About
         %li
@@ -27,6 +28,5 @@
           %a.close{:href => "#", :data => {:dismiss => "alert"} } ×
           = msg
       = yield
-      %hr
       %footer
         %p &copy; Canary Concrete 2012
