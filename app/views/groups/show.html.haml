@@ -1,3 +1,17 @@
+.row-fluid
+  .page-header
+    = link_to edit_group_path(@group), :class => "btn btn-primary" do
+      %i.icon-pencil.icon-white
+      Edit
+    = link_to groups_path, :class => "btn" do
+      %i.icon-list-alt
+      List all groups
+  .span4.border-right-blue
+    -@group.groups.each do |g|
+      = link_to g.name, group_path(g)
+  .span8.float-right
+    #content= @group.content
+
 %h1
   Group name: 
   = @group.name
@@ -11,5 +25,4 @@
     %tr
       %td= user.email
 = link_to 'Edit group name', edit_group_path(@group)
-|
-\#{link_to 'groups list', groups_path}
+

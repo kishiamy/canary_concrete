@@ -1,6 +1,7 @@
-= simple_form_for(@group) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :name
-  .form-actions
-    = f.button :submit
+.span12
+  = simple_form_for(@group, :defaults => { :input_html => { :class => "input-xxlarge" } }) do |f|
+    = f.error_notification
+    .form-inputs
+      = f.input :name
+    .form-actions
+      = f.button :submit
