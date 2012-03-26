@@ -6,22 +6,16 @@
     = link_to groups_path, :class => "btn" do
       %i.icon-list-alt
       List all groups
-  .span4.border-right-blue
-    -@group.groups.each do |g|
-      = link_to g.name, group_path(g)
-  .span8.float-right
-    #content= @group.content
-
-!!!%h1
-!!!  Group name  = @group.name
-!!!%table
-!!!  %tr
-!!!    %th users
-!!!    %th
-!!!    %th
-!!!    %th
-!!!  - @group.users.each do |user|
-!!!    %tr
-!!!      %td= user.email
-!!!= link_to 'Edit group name', edit_group_path(@group)
+    %h1
+      Group name  
+      = @group.name
+  - if @group.users.any? 
+    %table
+      %tr
+        %th Users
+        - @group.users.each do |user|
+          %tr
+            %td= user.email
+  - else 
+    %p= "There aren't users in this group"
 

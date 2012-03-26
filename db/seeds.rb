@@ -5,5 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-    groups = Group.create([{name: "Admin"}, {name: "User"},{name: "Secretary"}])
-    
+
+  Group.create([{name: "Admin"}, {name: "Client"}])
+
+  user = User.create(:email => "admin@admin.com", :password => "adminadmin")
+  user.update_attribute(:group_id, 1) 
+
