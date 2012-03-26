@@ -12,17 +12,16 @@
   .span8.float-right
     #content= @group.content
 
-%h1
-  Group name: 
-  = @group.name
-%table
-  %tr
-    %th users
-    %th
-    %th
-    %th
-  - @group.users.each do |user|
-    %tr
-      %td= user.email
-= link_to 'Edit group name', edit_group_path(@group)
+!!!%h1
+!!!  Group name  = @group.name
+!!!%table
+!!!  %tr
+!!!    %th users
+!!!    %th
+!!!    %th
+!!!    %th
+!!!  - @group.users.each do |user|
+!!!    %tr
+!!!      %td= user.email
+!!!= link_to 'Edit group name', edit_group_path(@group)
 

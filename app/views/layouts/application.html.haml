@@ -13,8 +13,6 @@
       %ul.hmenu
         =render "devise/menu/registration_items"
         =render "devise/menu/login_items"
-    = yield
-
     %meta{:charset => "utf-8"}
     %title Canary Concrete
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
@@ -31,8 +29,6 @@
     .container
       %header
       %ul.nav.nav-pills
-        %li
-          =link_to Page.first.try("title"), Page.first
         %li
           %a{:href => "#about"} About
         %li
