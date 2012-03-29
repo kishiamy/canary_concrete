@@ -6,8 +6,11 @@
     = link_to pages_path, :class => 'btn' do
       %i.icon-list-alt
       List all pages
+    =parents(@page).html_safe
   .span4.border-right-blue
-    -@page.pages.each do |p|
-      = link_to p.title, page_path(p)
+    - if @page.pages.first != nil
+      %ul.sub-pages
+        -@page.pages.each do |p|
+          %li= link_to p.title, page_path(p)
   .span8.float-right
     #content= @page.content

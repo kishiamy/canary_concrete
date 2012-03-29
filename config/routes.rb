@@ -1,5 +1,7 @@
 CanaryConcrete::Application.routes.draw do
-  resources :pages
+  resources :pages do
+    resources :pages
+  end
 
   devise_for :users
 

@@ -41,7 +41,9 @@ class PagesController < ApplicationController
   # POST /pages.json
   def create
     @page = Page.new(params[:page])
-
+    if params[:page_id]
+      @page.page_id = Page.find(params[:page_id])
+    end
     respond_to do |format|
       if @page.save
         format.html { redirect_to @page, notice: 'Page was successfully created.' }
