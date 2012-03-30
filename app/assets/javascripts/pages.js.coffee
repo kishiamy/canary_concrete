@@ -4,4 +4,4 @@
 
 #ugly method
 $(document).ready ->
-  $('.span4').height($('.span8').height()) if $('.span4').find('a').lengthPage.where(:page_id => nil) > 0
+  $('.span4').height($('.span8').height()) if $('.span4').find('a').lengthPage > 0
