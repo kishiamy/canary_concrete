@@ -5,6 +5,9 @@ header{
   height: 184px;
   width: 1024px;
 }
+.container {
+  width:1024px !important;
+}
 body, html{
   background-repeat: no-repeat;
   background-color: #091C33 !important;
@@ -36,6 +39,7 @@ body, html{
 .row-fluid {
   background-color: $sky-blue;
   padding: $gridGutterWidth;
+  width:auto !important;
 }
 
 .row {
@@ -59,23 +63,33 @@ body, html{
 }
 
 // override nav bar
-
-.nav-pills > li > a {
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important;
-  color: white !important;
-  background-color: $sky-blue !important;
-  min-height: 42px;
-  min-width: 88px;
-  text-align: center;
-  line-height: 42px !important;
-}
-.nav-pills > li {
-  margin-left: 4px;
-}
-.nav-pills > li:first-of-type {
-  margin-left: 0px !important;
+.nav-menu {
+  list-style: none;
+  height:42px;
+  margin-bottom:20px;
+  margin-left:0px;
+  margin-top:10px;
+  li {
+    margin-left: 1%;
+    width: 11.625%;
+    max-width: 11.625%;
+    float:left;
+    &:first-of-type {
+      margin-left: 0px ;
+      margin-right: 2px ;
+    }
+    a {
+      display:inline-block;
+      color: white;
+      text-decoration:none;
+      background-color: $sky-blue;
+      min-height: 42px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      line-height: 42px;
+    }
+  }
 }
 
 //footer styles
@@ -136,7 +150,7 @@ label {
   padding: 2px;
   height: 30px; 
   div {
-    right: 284px;
+    right: 480px;
     position: absolute;
     height: 34px;
     display: inline-block;
