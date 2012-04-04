@@ -16,7 +16,7 @@
   %body
     .container
       %header
-      %ul.nav.nav-pills
+      %ul.nav-menu
         - Page.where(:page_id => nil).each do |j|
           %li=link_to j.title, page_path(j)
         %li
