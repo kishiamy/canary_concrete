@@ -3,9 +3,13 @@ class ApplicationController < ActionController::Base
   
   protected
   def is_admin
-   unless current_user.group_id == 1
-     redirect_to root_url, :notice =>"You don't have permission to be here!"
-   end
+    if user_signed_in? == true
+      unless current_user.group.name == "Admin" 
+        redirect_to root_url, :notice =>"You don't have permission to be here!"
+      end
+    else
+      redirect_to root_url, :notice =>"You don't have permission to be here!" #DRY!
+    end
   end
   helper_method :is_admin
 
@@ -21,6 +25,7 @@ class ApplicationController < ActionController::Base
     return html.html_safe
   end
   helper_method :auto_pages
+
   def recursive_childs newtree={}
     newhtml = "<ul>"
     newtree.each_key do |key|

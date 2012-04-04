@@ -9,13 +9,14 @@
     %h1
       Group name  
       = @group.name
-  - if @group.users.any? 
-    %table
-      %tr
-        %th Users
-        - @group.users.each do |user|
-          %tr
-            %td= user.email
-  - else 
-    %p= "There aren't users in this group"
+  .span12
+    - if @group.users.any? 
+      %table.table.table-bordered.table-striped.reduce_width
+        %tr
+          %th Users
+          - @group.users.each do |user|
+            %tr
+              %td= user.email
+    - else 
+      %p= "There aren't users in this group"
 
