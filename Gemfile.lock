@@ -53,6 +53,7 @@ GEM
     columnize (0.3.6)
     commonjs (0.2.0)
       therubyracer (~> 0.9.9)
+    database_cleaner (0.7.2)
     devise (2.0.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.0.3)
@@ -200,6 +201,7 @@ DEPENDENCIES
   bootstrap-generators
   capybara
   coffee-rails (~> 3.2.1)
+  database_cleaner
   devise
   factory_girl_rails
   guard-rspec
