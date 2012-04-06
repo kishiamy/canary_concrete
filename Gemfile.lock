@@ -214,6 +214,7 @@ DEPENDENCIES
   rspec-rails
   ruby-debug19
   sass-rails (~> 3.2.3)
+  selenium-webdriver
   simple_form
   uglifier (>= 1.0.3)
   unicorn

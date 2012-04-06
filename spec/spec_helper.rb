@@ -25,7 +25,7 @@ RSpec.configure do |config|
   end
 
   config.after(:each) do
-    Database.Cleaner.clean
+    DatabaseCleaner.clean
   end
 
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
