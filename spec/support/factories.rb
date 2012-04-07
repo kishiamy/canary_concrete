@@ -6,8 +6,8 @@ FactoryGirl.define do
     u.group        { |group| group.association(:group) }
   end
   factory :admin, :parent => :user do |a|
-    a.password                { "adminadmin" }
-    a.password_confirmation   { "adminadmin" }
+    a.password                  "adminadmin" 
+    a.password_confirmation     "adminadmin" 
     a.email                   { Faker::Internet.email }
     a.group        { |group| group.association(:group_admin) }
   end
