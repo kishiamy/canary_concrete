@@ -7,7 +7,7 @@ describe "groups index" do
       login @admin
     end
 
-    it "don't has alert" do
+    it "dosen't has alert" do
       visit groups_path
       page.should_not have_content("You don't have permission to be here!")
     end
@@ -18,6 +18,7 @@ describe "groups index" do
       @user = Factory(:user)
       login @user
     end
+
     it "has alert", :js => true do
       visit groups_path
       page.should have_content("You don't have permission to be here!")
