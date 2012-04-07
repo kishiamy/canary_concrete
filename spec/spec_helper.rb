@@ -5,12 +5,19 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require "capybara/rspec"
 require "capybara/rails"
+require 'database_cleaner'
+require 'capybara/firebug'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
+Selenium::WebDriver::Firefox::Profile.firebug_version = '1.8.3'
+Capybara.default_driver = :selenium
+Capybara.default_wait_time = 5
+DatabaseCleaner.strategy = :truncation
 RSpec.configure do |config|
+  config.use_transactional_fixtures = false
   # ## Mock Framework
   #
   # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
@@ -40,4 +47,5 @@ RSpec.configure do |config|
   # automatically. This will be the default behavior in future versions of
   # rspec-rails.
   config.infer_base_class_for_anonymous_controllers = false
+  config.include(HelperMethods)
 end

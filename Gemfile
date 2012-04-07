@@ -7,6 +7,8 @@ gem 'rails', '3.2.2'
 gem 'mysql2'
  gem "rspec-rails", :group => [:test, :development]
 group :test do
+  gem 'faker'
+  gem 'capybara-firebug'
   gem "factory_girl_rails"
   gem "capybara"
   gem "guard-rspec"
