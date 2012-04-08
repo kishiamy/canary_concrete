@@ -3,11 +3,11 @@ require 'spec_helper'
 describe "groups index" do
   describe "admin visit" do
     before do
-      @admin = Factory(:admin, email: "admin@admin.com", password: "adminadmin",  password_confirmation: "adminadmin")
+      @admin = Factory(:admin)
       login @admin
     end
 
-    it "dosen't has alert" do
+    it "doesn't has alert" do
       visit groups_path
       current_path.should == groups_path
     end

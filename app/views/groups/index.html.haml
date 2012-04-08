@@ -15,7 +15,7 @@
           %tr
             %td= link_to group.name, group_path(group)
             %td
-              = link_to edit_group_path(group), :class => "btn btn-primary" do
+              = link_to edit_group_path(group), :class => "btn btn-primary #{group.name}" do
                 %i.icon-pencil.icon-white
                 Edit
               = link_to group, :class => "btn btn-danger", :confirm => 'Are you sure?', :method => :delete do
