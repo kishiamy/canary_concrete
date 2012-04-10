@@ -1,8 +1,16 @@
-%table
-  -@users.each do |u|
-    %tr
-      %td=u.email
-      %td
-        =simple_form_for u, :url => edit_user_group_path(u) do |f|
-          =f.association :group, :label => false
-          =f.button :submit
+.row-fluid
+  .content
+    .page-header
+      %h1 Manage groups
+      %table.table_form
+        %tr
+          %th User
+          %th Change group
+        - @users.each do |u|
+          %tr
+            %td=u.email 
+            %td
+              =simple_form_for u, :url => edit_user_group_path(u) do |f|
+                =f.association :group, :label => false
+                =f.button :submit, "Change group"
+
