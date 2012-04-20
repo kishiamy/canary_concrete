@@ -6,7 +6,7 @@
     = link_to pages_path, :class => 'btn' do
       %i.icon-list-alt
       List all pages
-    =parents(@page).html_safe
+    = breadcrumb(@page)
   .span4.border-right-blue
     - if @page.pages.first != nil
       %ul.sub-pages

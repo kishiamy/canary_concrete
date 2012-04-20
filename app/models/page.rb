@@ -3,25 +3,19 @@ class Page < ActiveRecord::Base
   belongs_to :page
 
   def family
+    components = []
     if self.pages
-      family_record={}
-      i=1
-      self.pages.each do |child|
-        family_record[i]=child
-        family_record[i]["hijos"]=child.family 
-        i=i+1
+      self.pages.each_with_index do |child, index|
+        components[index] = child
+        components[index][:childs]= child.family
       end
-      return family_record
     end
   end
   def self.tree
-    tree={}
-    i=1
-    Page.where(:page_id=>nil).each do |bastard|
-      tree[i]=bastard
-      tree[i]["hijos"]=bastard.family
-      i=i+1
+    tree=[]
+    Page.where(:page_id=>nil).each_with_index do |bastard, index|
+      tree[index] = bastard
+      tree[index][:childs]= bastard.family
     end
-    return tree
   end
 end
