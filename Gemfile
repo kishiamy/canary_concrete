@@ -4,9 +4,10 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
- gem "rspec-rails", :group => [:test, :development]
+gem 'pg'
+
 group :test do
+  gem "rspec-rails", :group => [:test, :development]
   gem 'faker'
   gem 'capybara-firebug'
   gem "factory_girl_rails"
