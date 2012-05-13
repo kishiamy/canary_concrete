@@ -2,7 +2,6 @@ class GroupsController < ApplicationController
   
   before_filter :is_admin
 
-
   # GET /groups
   # GET /groups.json
   def index
