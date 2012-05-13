@@ -1,5 +1,16 @@
 module PagesHelper
 
+  def recursive_childs newtree={}
+    newhtml = "<ul>"
+    newtree.each_key do |key|
+      newhtml << "<li class='plegate'>"
+      newhtml << "<a href='/pages/" + newtree[key].id.to_s + "'>" + newtree[key].title + "</a>"  
+      newhtml << recursive_childs(newtree[key]["hijos"].rehash)
+      newhtml << "</li>"
+    end
+    return newhtml << "</ul>"
+  end   
+
   def auto_pages
     html = ""
     Page.tree.each_key do |key|
