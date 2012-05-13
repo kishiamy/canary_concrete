@@ -1,15 +1,18 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  
-  protected
-  def is_admin
-    if user_signed_in? == true
-      unless current_user.group.name == "Admin" 
-        redirect_to root_url, :notice =>"You don't have permission to be here!"
-      end
-    else
-      redirect_to root_url, :notice =>"You don't have permission to be here!" #DRY!
-    end
+
+  class AdminUserIsRequired < StandardError; end
+
+  rescue_from AdminUserIsRequired do |exception|
+    flash.now[:error] = "You don't have permission to be here!"
+    render text: " ", layout: true, status: 403
   end
+
+  protected
+    def is_admin
+      unless user_signed_in? and current_user.group.admin?
+        raise AdminUserIsRequired
+      end
+    end
 
 end
