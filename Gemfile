@@ -30,6 +30,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "inherited_resources"
+
 gem 'jquery-rails'
 #Autenticacion sistem 
 gem "devise" 
