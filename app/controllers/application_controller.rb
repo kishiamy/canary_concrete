@@ -11,7 +11,6 @@ class ApplicationController < ActionController::Base
       redirect_to root_url, :notice =>"You don't have permission to be here!" #DRY!
     end
   end
-  helper_method :is_admin
 
   def recursive_childs newtree={}
     newhtml = "<ul>"
