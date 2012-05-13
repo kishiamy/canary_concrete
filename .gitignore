@@ -18,3 +18,7 @@ config/database.yml
 
 # Ignore final .rvmrc file
 .rvmrc
+
+# Ignore bin/ directory, generated from
+# $ bundle install --binstubs
+/bin/
