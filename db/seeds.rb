@@ -6,8 +6,17 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-  Group.create([{name: "Admin"}, {name: "Client"}])
+Groups = {
+  admin: Group.find_or_create_by_name("Admin"),
+  client: Group.find_or_create_by_name("Client")
+}
 
-  user = User.create(:email => "admin@admin.com", :password => "adminadmin")
-  user.update_attribute(:group_id, 1) 
-
+# Create the example user only when there is no data
+if User.count == 0
+  User.new.tap do |user|
+    user.email = "admin@admin.com"
+    user.password = "adminadmin"
+    user.group = Groups[:admin]
+    user.save!
+  end
+end

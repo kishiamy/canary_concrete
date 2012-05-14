@@ -4,9 +4,10 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
- gem "rspec-rails", :group => [:test, :development]
+gem 'pg'
+
 group :test do
+  gem "rspec-rails", :group => [:test, :development]
   gem 'faker'
   gem 'capybara-firebug'
   gem "factory_girl_rails"
@@ -29,6 +30,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "inherited_resources"
+
 gem 'jquery-rails'
 #Autenticacion sistem 
 gem "devise" 
@@ -49,5 +52,7 @@ gem 'unicorn'
 # Deploy with Capistrano
 # gem 'capistrano'
 
-# To use debugger
-gem 'ruby-debug19', :require => 'ruby-debug'
+group :development, :test do
+  # To use debugger
+  gem "debugger"
+end

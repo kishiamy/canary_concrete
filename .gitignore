@@ -15,5 +15,13 @@
 /tmp
 config/database.yml
 *.swp
+
 # Ignore final .rvmrc file
 .rvmrc
+
+# Ignore sass files
+/.sass-cache
+
+# Ignore bin/ directory, generated from
+# $ bundle install --binstubs
+/bin/
