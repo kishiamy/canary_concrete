@@ -31,4 +31,29 @@ module PagesHelper
       return pages.html_safe
     end
   end
+
+  def print_tree2(tree = [])
+    # html = ""
+    tree.each do |page|
+      content_tag :li, class: "li_menu" do 
+        link_to(page.title, page_path(page)) 
+        content_tag :div do
+          link_to("Edit", edit_page_path(page)) 
+          link_to("Delete", page_path(page), :method =>"delete", :confirm =>"")
+          link_to("add sub-page", new_page_page_path(page))
+          # html << " <div><a href='/pages/#{page.id}/edit' class='btn btn-primary'><i class='icon-pencil icon-white'></i> Edit </a>"
+          # html << " <a href='/pages/#{page.id}' class='btn btn-danger' data-confirm='Are you sure?' data-method='delete' rel='nofollow'><i class='icon-trash icon-white'></i>Delete</a>"
+          # html << " <a href='/pages/#{page.id}/pages/new' class='btn btn-primary'><i class='icon-plus icon-white'></i> add sub-page</a></div>"
+        end
+        if page[:childs]
+          content_tag :ul, class: "subpages" do
+           print_tree2(page[:childs])            
+          # html << "<ul class='subpages'>"
+          # html << print_tree(page[:childs]) 
+          end
+        end
+      end
+    # return html.html_safe
+    end
+  end.html_safe
 end
