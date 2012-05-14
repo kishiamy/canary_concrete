@@ -142,6 +142,9 @@ label {
   border-top: 0px !important;
 }
 //tree styles
+.tree { 
+  position:relative;
+}
 .tree, .sub-tree{
   list-style:none;
 }
@@ -150,7 +153,7 @@ label {
   padding: 2px;
   height: 30px; 
   div {
-    right: 480px;
+    right: 10px;
     position: absolute;
     height: 34px;
     display: inline-block;
