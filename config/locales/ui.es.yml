@@ -1,0 +1,11 @@
+es:
+  general:
+    buttons:
+      edit: Editar
+      delete: Borrar
+      move: Mover
+    manage:
+      manage_groups: Gestionar grupos
+      user: Usuario
+      change_group: Cambiar grupo
+      dummy:  Maniquí
