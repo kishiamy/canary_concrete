@@ -35,8 +35,8 @@ es:
       signed_up: "¡Bienvenido/a! Ha sido registrado con éxito."
       signed_up_but_inactive: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta no ha sido activada todavía."
       signed_up_but_locked: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta está bloqueda."
-       updated: "Ha actualizado su cuenta con éxito."
-       update_needs_confirmation: "Ha actualizado su cuenta con éxito, pero necesitamos verificar su email. Por favor, compruebe su email y haga click sobre el enlace de confirmación para finalizar la confirmación de su email."
+      updated: "Ha actualizado su cuenta con éxito."
+      update_needs_confirmation: "Ha actualizado su cuenta con éxito, pero necesitamos verificar su email. Por favor, compruebe su email y haga click sobre el enlace de confirmación para finalizar la confirmación de su email."
       destroyed: "¡Adiós!, su cuenta ha sido cancelada con éxita. Esperamos verle pronto."
     unlocks:
       send_instructions: "Recibirá un email con las instrucciones sobre como desbloquear su cuenta en un par de minutos."
@@ -44,7 +44,7 @@ es:
       send_paranoid_instructions: "Si su cuenta existe, recibirá un email con instrucciones sobre cómo desbloquearla en unos minutos."
     omniauth_callbacks:
       success: "Autorizado con éxito desde su %{kind} cuenta." 
-      failure: "No se puede autorizar desde %{kind} porque "%{reason}"."
+      failure: "No se puede autorizar desde %{kind} porque \"%{reason}\"."
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación"
