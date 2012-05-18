@@ -4,8 +4,11 @@ es:
       edit: Editar
       delete: Borrar
       move: Mover
+      show: Mostrar
     manage:
       manage_groups: Gestionar grupos
+      list_groups: Mostrar todos los grupos
+      edit_group: Editando grupo
       user: Usuario
       change_group: Cambiar grupo
-      dummy:  Maniquí
+    dummy:  Maniquí

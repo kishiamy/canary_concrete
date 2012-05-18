@@ -6,4 +6,4 @@ es:
       text: "requerido"
       mark: "*"
     error_notification:
-      default_message: "Se encontraron errores, por favor eche un vistazo:"
+      default_message: "Se encontraron errores, por favor revise los campos:"

@@ -4,9 +4,11 @@ en:
       edit: Edit  
       delete: Delete
       move: Move
+      show: Show
     manage:
       manage_groups:  Manage groups
+      list_groups: List all groups
+      edit_group: Editing group
       user: User
       change_group: Change group
     dummy: Dummy
-
