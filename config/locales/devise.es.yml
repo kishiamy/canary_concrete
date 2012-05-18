@@ -6,8 +6,8 @@ es:
       already_confirmed: "ya fue confirmado, por favor intente acceder"
       not_locked: "no fue bloqueado"
       not_saved:
-        one: "un error prohibió que esto %{recursos} fuera guardado:"
-        other: "%{contar} errores prohibieron que este %{recurso} fuera guardado:"
+        one: "un error prohibió que esto %{resource} fuera guardado:"
+        other: "%{count} errores prohibieron que este %{resource} fuera guardado:"
 
   devise:
     failure:
@@ -43,8 +43,8 @@ es:
       unlocked: "Su cuenta ha sido desactivada con éxito. Por favor, inicie sesión para continuar."
       send_paranoid_instructions: "Si su cuenta existe, recibirá un email con instrucciones sobre cómo desbloquearla en unos minutos."
     omniauth_callbacks:
-      success: "Autorizado con éxito desde su %{tipo} cuenta." 
-      failure: "No se puede autorizar desde %{tipo} porque "%{razón}"."
+      success: "Autorizado con éxito desde su %{kind} cuenta." 
+      failure: "No se puede autorizar desde %{kind} porque "%{reason}"."
     mailer:
       confirmation_instructions:
         subject: "Instrucciones de confirmación"
