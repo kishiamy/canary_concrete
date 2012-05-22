@@ -22,7 +22,6 @@ es:
     sessions:
       new:
         sign_in: 'Acceder'
-        links: 'enlaces'
       signed_in: "Acceso realizado con éxito."
       signed_out: "Salida con éxito"
     passwords:

@@ -6,4 +6,4 @@
   .actions
     = f.button :submit, t('.sign_in')
     = f.input :remember_me, :as => :boolean if devise_mapping.rememberable?
-= render t('.links')
+= render 'links'

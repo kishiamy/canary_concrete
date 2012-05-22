@@ -23,7 +23,6 @@ en:
     sessions:
       new:
         sign_in: 'Sign in'
-        links: 'links'
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
     passwords:
