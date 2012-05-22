@@ -2,21 +2,21 @@
   .page-header
     = link_to edit_group_path(@group), :class => "btn btn-primary" do
       %i.icon-pencil.icon-white
-      Edit
+      = t'.edit'
     = link_to groups_path, :class => "btn" do
       %i.icon-list-alt
-      List all groups
+      = t'.list_groups'
     %h1
-      Group name  
+      = t'.group_name'  
       = @group.name
   .span12
     - if @group.users.any? 
       %table.table.table-bordered.table-striped.reduce_width
         %tr
-          %th Users
+          %th= t'.users'
           - @group.users.each do |user|
             %tr
               %td= user.email
     - else 
-      %p= "There aren't users in this group"
+      %p= t'.no_users_group'
 

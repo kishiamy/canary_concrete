@@ -20,18 +20,38 @@ es:
       timeout: "Su sesión ha expirado, por favor acceda de nuevo a su cuenta para continuar."
       inactive: "Su cuenta todavía no ha sido activada."
     sessions:
+      new:
+        sign_in: 'Acceder'
+        links: 'enlaces'
       signed_in: "Acceso realizado con éxito."
       signed_out: "Salida con éxito"
     passwords:
+      change: 'Cambiar su contraseña'
+      new: 'Nueva contraseña'
+      confirm: 'Confirme su nueva contraseña'
+      change_my: 'Cambiar mi contraseña'
+      forgot: '¿Olvidó su contraseña?'
+      send_reset: 'Enviar reestablecer contraseña'
       send_instructions: "Recibirá un email con las instrucciones sobre como reestablecer su contraseña en pocos minutos."
       updated: "Su contraseña ha sido cambiada con éxito. Ha iniciado sesión."
       updated_not_active: "Su contraseña ha sido cambiada con éxito."
       send_paranoid_instructions: "Si su email existe en nuestra base de datos, recibirá un enlace con la recuperación de la contraseña en su email."
     confirmations:
+      resend_subject: "Reenviar instrucciones de confirmación"
       send_instructions: "Recibirá un email con las instrucciones sobre como confirmar su cuenta en un par de minutos."
       send_paranoid_instructions: "Si su email existe en nuestra base de datos, recibirá un email con las instrucciones sobre como confirmar su cuenta en un par de minutos."
       confirmed: "Su cuenta ha sido activada con éxito. Ha iniciado sesión."
     registrations:
+      edit: 'Editar'
+      leave_blank: 'Déjelo en blanco si no quiere cambiarlo'
+      need_password: 'Se necesita su contraseña acutal para confirmar los cambios'
+      update: 'Actualizar'
+      cancel: 'Cancelar mi cuenta'
+      unhappy: '¿Insatisfecho?'
+      sure: '¿Está seguro?'
+      back: 'Volver'
+      sign_up: 'Registrar'
+      links: 'enlaces'
       signed_up: "¡Bienvenido/a! Ha sido registrado con éxito."
       signed_up_but_inactive: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta no ha sido activada todavía."
       signed_up_but_locked: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta está bloqueda."
@@ -39,6 +59,8 @@ es:
       update_needs_confirmation: "Ha actualizado su cuenta con éxito, pero necesitamos verificar su email. Por favor, compruebe su email y haga click sobre el enlace de confirmación para finalizar la confirmación de su email."
       destroyed: "¡Adiós!, su cuenta ha sido cancelada con éxita. Esperamos verle pronto."
     unlocks:
+      resend_unlock: 'Reenviar instrucciones de desbloqueo'
+      links: 'enlaces'
       send_instructions: "Recibirá un email con las instrucciones sobre como desbloquear su cuenta en un par de minutos."
       unlocked: "Su cuenta ha sido desactivada con éxito. Por favor, inicie sesión para continuar."
       send_paranoid_instructions: "Si su cuenta existe, recibirá un email con instrucciones sobre cómo desbloquearla en unos minutos."
@@ -47,8 +69,34 @@ es:
       failure: "No se puede autorizar desde %{kind} porque \"%{reason}\"."
     mailer:
       confirmation_instructions:
+        welcome: '¡Bienvenido/a!'
+        confirm_link: 'Puede confirmar su cuenta email a través del siguiente enlace:'
+        confirm_account: 'Confirmar mi cuenta'
         subject: "Instrucciones de confirmación"
       reset_password_instructions:
         subject: "Instrucciones de reiniciar contraseña"
+        hello: 'Hola'
+        information: 'Alguien ha pedido cambiar su contraseña. Puede hacerlo a través del siguiente enlace'
+        change: 'Cambiar mi contraseña'
+        ignore: 'Si no ha pedido cambiarla, ignore este email.'
+        notice: 'Su contraseña no será cambiada hasta que acceda al enlace de arriba y cree una nueva.'
       unlock_instructions:
         subject: "Instrucciones de desbloqueo"
+        hello: 'Hola'
+        locked: 'Su cuenta ha sido bloqueada debido a una señal de cantidad excesiva de peticiones sin éxito.'
+        click: 'Haga click en el siguiente enlace para desbloquear su cuenta:'
+        unlock: 'Desbloquear mi cuenta'
+    menu:
+      _login_items:
+        logout: 'Salir'
+        login: 'Acceder'
+      _registration_items:
+        edit: 'Editar registro'
+        register: 'Registrar'
+    _links:
+      sign_in: 'Acceder'
+      sign_up: 'Registrar'
+      forgot: '¿Olvidó su contraseña?'
+      not_confirmation: '¿No ha recibido las instrucciones de confirmación?'
+      not_unlock: '¿No ha recibido las instrucciones de desbloqueo?'
+      sign_in_with: 'Acceder con'

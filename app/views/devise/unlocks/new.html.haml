@@ -1,8 +1,8 @@
-%h2 Resend unlock instructions
+%h2= t'.resend_unlock'
 = simple_form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f|
   = f.error_notification
   .inputs
     = f.input :email, :required => true
   .actions
-    = f.button :submit, "Resend unlock instructions"
-= render "links"
+    = f.button :submit, t('.resend_unlock')
+= render t('.links')

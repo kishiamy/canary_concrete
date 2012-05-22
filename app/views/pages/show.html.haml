@@ -2,10 +2,10 @@
   .page-header
     = link_to edit_page_path(@page), :class => 'btn btn-primary' do
       %i.icon-pencil.icon-white
-      Edit
+      = t'.edit'
     = link_to pages_path, :class => 'btn' do
       %i.icon-list-alt
-      List all pages
+      = t'.list_pages'
   .span4.border-right-blue
     -@page.pages.each do |p|
       = link_to p.title, page_path(p)

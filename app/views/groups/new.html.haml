@@ -3,8 +3,8 @@
     .page-header
       = link_to groups_path, :class => "btn" do
         %i.icon-list-alt
-        List of groups
-      %h1 New group
+        = t'.list_group'
+      %h1= t'.new_group'
 
     = render 'form'
     = link_to 'Back', groups_path, :class => "btn"

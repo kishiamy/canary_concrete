@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-
+  before_filter :set_locale
   class AdminUserIsRequired < StandardError; end
 
   rescue_from AdminUserIsRequired do |exception|
-    flash.now[:error] = "You don't have permission to be here!"
+    flash.now[:error] = t('general.controllers.forbiden')
     render text: " ", layout: true, status: 403
   end
 
@@ -14,5 +14,8 @@ class ApplicationController < ActionController::Base
         raise AdminUserIsRequired
       end
     end
-
+  private
+    def set_locale
+      I18n.locale = params[:locale] if params[:locale].present?
+    end
 end

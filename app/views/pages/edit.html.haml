@@ -3,10 +3,10 @@
     .page-header
       = link_to pages_path, :class => 'btn' do
         %i.icon-list-alt
-        List all pages
+        = t'.list_pages'
       = link_to @page, :class => 'btn btn-primary' do
         %i.icon-info-sign.icon-white
-        Show
-      %h1 Editing page
+        = t'.show'
+      %h1= t'.edit_page'
 
     = render 'form'

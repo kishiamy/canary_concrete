@@ -1,14 +1,30 @@
 es:
   general:
     buttons:
-      edit: Editar
+      edit: Editar  
       delete: Borrar
       move: Mover
       show: Mostrar
     manage:
-      manage_groups: Gestionar grupos
-      list_groups: Mostrar todos los grupos
-      edit_group: Editando grupo
-      user: Usuario
-      change_group: Cambiar grupo
-    dummy:  Maniquí
+      manage_groups:  Gestionar grupos
+      list_groups: Mostrar todos los groupos
+      edit_group: Editar grupo
+      user: Usario
+      change_group: Cambiar groupo
+      new_group: Nuevo grupo
+      name: Nombre
+      sure: ¿Está seguro/a?
+      list_group: Lista de grupos 
+      group_name: Nombre del grupo
+      users: Usuarios
+      no_users_group: No existen usuarios en este grupo
+      list_pages: Mostrar todas las páginas
+      edit_page: Editar página
+      new_page: Nueva página
+      list_of_pages: Lista de páginas
+      title: Título
+      page_father: Página padre
+      actions: Acciones
+    controllers:
+      notice: 'El grupo ha sido actualizado con éxito.' 
+      forbiden: 'No tiene permiso para estar aquí'

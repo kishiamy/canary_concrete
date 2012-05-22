@@ -11,4 +11,20 @@ en:
       edit_group: Editing group
       user: User
       change_group: Change group
-    dummy: Dummy
+      new_group: New group
+      name: Name
+      sure: Are you sure?
+      list_group: List of groups 
+      group_name: Group name
+      users: Users
+      no_users_group: There aren't users in this group
+      list_pages: List all pages
+      edit_page: Edit page
+      new_page: New page
+      list_of_pages: List of pages
+      title: Title
+      page_father: Page father
+      actions: Actions
+    controllers:
+      notice: 'Group was successfully updated.'
+      forbiden: 'You do not have permission to be here!'

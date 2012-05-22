@@ -3,14 +3,14 @@
     .page-header
       = link_to new_page_path, :class => 'btn btn-primary' do
         %i.icon-plus.icon-white
-        New Page
-      %h1 Listing pages
+        = t'.new_page'
+      %h1= t'.list_of_pages'
     %table.table.table-bordered.table-striped.center
       %thead
         %tr
-          %th Title
-          %th Page father
-          %th Actions
+          %th= t'.title'
+          %th= t'.page_father'
+          %th= t'.actions'
 
       %tbody
         - @pages.each do |p|
@@ -20,10 +20,10 @@
             %td
               = link_to edit_page_path(p), :class => 'btn btn-primary' do
                 %i.icon-pencil.icon-white
-                Edit
-              = link_to p, :class => 'btn btn-danger',:confirm => 'Are you sure?', :method => :delete do
+                = t'.edit'
+              = link_to p, :class => 'btn btn-danger',:confirm => t('.sure'), :method => :delete do
                 %i{:class =>'icon-trash icon-white'} 
-                Delete
+                = t'.delete'
 
 
     = pages_tree
