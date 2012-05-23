@@ -22,8 +22,10 @@ es:
     sessions:
       new:
         sign_in: 'Acceder'
+        sign_up: 'Registrarse'
       signed_in: "Acceso realizado con éxito."
       signed_out: "Salida con éxito"
+      remember: 'Recordarme'
     passwords:
       change: 'Cambiar su contraseña'
       new: 'Nueva contraseña'
@@ -50,7 +52,6 @@ es:
       sure: '¿Está seguro?'
       back: 'Volver'
       sign_up: 'Registrar'
-      links: 'enlaces'
       signed_up: "¡Bienvenido/a! Ha sido registrado con éxito."
       signed_up_but_inactive: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta no ha sido activada todavía."
       signed_up_but_locked: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta está bloqueda."

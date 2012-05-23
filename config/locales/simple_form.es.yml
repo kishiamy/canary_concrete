@@ -7,3 +7,15 @@ es:
       mark: "*"
     error_notification:
       default_message: "Se encontraron errores, por favor revise los campos:"
+    labels:
+      user:
+        password: 'Contraseña'
+        email: 'Email'
+      remember: 'Recordarme'
+    hints:
+      username: 'Nombre de usuario para acceder'
+      password: 'Sin caracteres especiales, por favor.'
+    
+  sign_up: 'Registrarse'
+  forgot: '¿Olvidó su contraseña?' 
+  sign_in: 'Acceder'
