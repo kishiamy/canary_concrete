@@ -3,10 +3,10 @@
     .page-header
       = link_to groups_path, :class => "btn" do
         %i.icon-list-alt
-        = t'.list_groups'
+        = t'general.manage.list_groups'
       = link_to @group, :class => "btn btn-primary" do
         %i.icon-info-sign.icon-white
-        = t'.show'
-      %h1= t'.edit_group'
-    = render 'form'
+        = t'general.buttons.show'
+      %h1= t'general.manage.update_group'
+    = render :partial =>'form', :locals => { :submit_label => I18n.t('general.manage.update_group') }
     

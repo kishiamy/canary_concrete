@@ -3,8 +3,8 @@
     .page-header
       = link_to groups_path, :class => "btn" do
         %i.icon-list-alt
-        = t'.list_group'
-      %h1= t'.new_group'
+        = t'general.manage.list_group'
+      %h1= t'general.manage.new_group'
 
-    = render 'form'
-    = link_to 'Back', groups_path, :class => "btn"
+    = render :partial =>'form', :locals => { :submit_label => I18n.t('general.manage.create_group') }
+    = link_to t('general.manage.back'), groups_path, :class => "btn"

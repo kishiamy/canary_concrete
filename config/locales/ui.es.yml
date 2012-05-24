@@ -13,10 +13,12 @@ es:
       change_group: Cambiar groupo
       new_group: Nuevo grupo
       name: Nombre
+      create_group: Crear grupo
       sure: ¿Está seguro/a?
       list_group: Lista de grupos 
       group_name: Nombre del grupo
       users: Usuarios
+      update_group: Actualizar grupo
       no_users_group: No existen usuarios en este grupo
       list_pages: Mostrar todas las páginas
       edit_page: Editar página
@@ -25,6 +27,7 @@ es:
       title: Título
       page_father: Página padre
       actions: Acciones
+      back: Volver
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 
       forbiden: 'No tiene permiso para estar aquí'

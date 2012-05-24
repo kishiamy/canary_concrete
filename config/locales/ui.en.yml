@@ -13,11 +13,13 @@ en:
       change_group: Change group
       new_group: New group
       name: Name
+      create_group: Create group
       sure: Are you sure?
       list_group: List of groups 
       group_name: Group name
       users: Users
       no_users_group: There aren't users in this group
+      update_group: Update group
       list_pages: List all pages
       edit_page: Edit page
       new_page: New page
@@ -25,6 +27,7 @@ en:
       title: Title
       page_father: Page father
       actions: Actions
+      back: Back
     controllers:
       notice: 'Group was successfully updated.'
       forbiden: 'You do not have permission to be here!'

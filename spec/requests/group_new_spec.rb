@@ -5,9 +5,9 @@ describe "new group" do
       @admin = Factory(:admin)
       login @admin
       visit groups_path
-      click_on ("New Group")
+      click_on ("New group")
       fill_in "Name", :with => "My new group"
-      click_on ("Create Group")
+      click_on ("Create group")
     end
     it "check the name" do
       Group.find_by_name("My new group").name.should == "My new group"
