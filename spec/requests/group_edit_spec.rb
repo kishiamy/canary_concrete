@@ -5,8 +5,8 @@ describe "edit group" do
       @admin = Factory(:admin)
       @group = Factory(:group, name: "Extras")
       login @admin
-      visit groups_path
-      find("a[href='#{edit_group_path(@group)}']").click
+      visit groups_path(:locale => 'en')
+      find("a[href='#{edit_group_path(@group, :locale => 'en')}']").click
       fill_in "Name", :with => "Without permission"
       click_on ('Update group')
     end

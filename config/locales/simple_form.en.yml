@@ -14,7 +14,13 @@ en:
       user:
         password: 'Password'
         email: 'E-mail'
-      remember: 'Remember me'
+        remember_me: 'Remember me'
+        password_confirmation: 'Password confirmation'
+      page:
+        title: 'Title'
+        content: 'Content' 
+        page: 'Page'
+        submit: 'Create page'
     hints:
       username: 'User name to sign in'
       password: 'No special characters, please.'

@@ -11,7 +11,13 @@ es:
       user:
         password: 'Contraseña'
         email: 'Email'
-      remember: 'Recordarme'
+        remember_me: 'Recordarme'
+        password_confirmation: 'Repita contraseña'
+      page:
+        title: 'Título'
+        content: 'Contenido'
+        page: 'Página'
+        submit: 'asdfasdf'
     hints:
       username: 'Nombre de usuario para acceder'
       password: 'Sin caracteres especiales, por favor.'

@@ -1,8 +1,8 @@
-%h2= t'.forgot'
+%h2= t'devise.passwords.forgot'
 = simple_form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post, :class => 'form-vertical' }) do |f|
   = f.error_notification
   .inputs
     = f.input :email, :required => true
   .actions
-    = f.button :submit, t('.send_reset')
+    = f.button :submit, t('devise.passwords.send_reset')
 = render "links"

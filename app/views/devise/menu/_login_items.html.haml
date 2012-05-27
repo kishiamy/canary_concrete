@@ -1,4 +1,4 @@
 -if user_signed_in?
-  %li=link_to t(".logout"), destroy_user_session_path, :method => :delete
+  %li=link_to t("devise.menu._login_items.logout"), destroy_user_session_path, :method => :delete
 -else
-  %li=link_to t(".login"), new_user_session_path
+  %li=link_to t("devise.menu._login_items.login"), new_user_session_path

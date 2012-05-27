@@ -28,6 +28,8 @@ en:
       page_father: Page father
       actions: Actions
       back: Back
+      create_page: Create page
+      update_page: Update page
     controllers:
       notice: 'Group was successfully updated.'
       forbiden: 'You do not have permission to be here!'

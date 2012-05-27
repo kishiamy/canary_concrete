@@ -7,10 +7,10 @@ es:
       show: Mostrar
     manage:
       manage_groups:  Gestionar grupos
-      list_groups: Mostrar todos los groupos
+      list_groups: Mostrar todos los grupos
       edit_group: Editar grupo
       user: Usario
-      change_group: Cambiar groupo
+      change_group: Cambiar grupo
       new_group: Nuevo grupo
       name: Nombre
       create_group: Crear grupo
@@ -28,6 +28,8 @@ es:
       page_father: Página padre
       actions: Acciones
       back: Volver
+      create_page: Crear página
+      update_page: Actualizar página
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 
       forbiden: 'No tiene permiso para estar aquí'

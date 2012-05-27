@@ -58,6 +58,7 @@ es:
       updated: "Ha actualizado su cuenta con éxito."
       update_needs_confirmation: "Ha actualizado su cuenta con éxito, pero necesitamos verificar su email. Por favor, compruebe su email y haga click sobre el enlace de confirmación para finalizar la confirmación de su email."
       destroyed: "¡Adiós!, su cuenta ha sido cancelada con éxita. Esperamos verle pronto."
+      password_confirmation: 'Repita contraseña'
     unlocks:
       resend_unlock: 'Reenviar instrucciones de desbloqueo'
       links: 'enlaces'
