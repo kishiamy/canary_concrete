@@ -40,6 +40,7 @@ body {
 }
 
 .row {
+  width: 303px;
   background-color: $sky-blue;
   padding: $gridGutterWidth;
 }
@@ -159,5 +160,34 @@ label {
     width: 303px;
   }
 }
-
+.devise_row-fluid {
+  width: 293px;
+  background-color: $sky-blue;
+  padding-left: 10px;
+  footer{
+    margin-bottom: 20px;
+    height:1px;
+  }
+  form{
+    position:relative;
+    margin-bottom: 50px;
+      .actions{
+        .btn{
+          position:absolute;
+          left: 1px;
+        }
+      .control-group{
+        label.boolean{
+          position:absolute;
+          top: 145px;
+          right: 80px;
+        }
+      .controls >label > input.boolean {
+        position:absolute;
+        right: 50px;
+        top: 145px;
+      }
+    }
+  }
+} 
 @import "scss/bootstrap";
