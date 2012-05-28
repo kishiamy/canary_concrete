@@ -8,8 +8,8 @@ describe "groups index" do
     end
 
     it "doesn't has alert" do
-      visit groups_path(:locale => 'en')
-      current_path.should == groups_path(:locale => 'en')
+      visit groups_path
+      current_path.should == groups_path
     end
   end
 
@@ -20,14 +20,14 @@ describe "groups index" do
     end
 
     it "has alert" do
-      visit groups_path(:locale => 'en')
+      visit groups_path
       page.should have_content("You do not have permission to be here!")
     end
   end
 
   describe "without login" do
     it "user without login" do
-      visit groups_path(:locale => 'en')
+      visit groups_path
       page.should have_content("You do not have permission to be here!")
     end
   end

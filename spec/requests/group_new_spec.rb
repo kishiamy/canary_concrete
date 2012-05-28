@@ -4,7 +4,7 @@ describe "new group" do
     before do
       @admin = Factory(:admin)
       login @admin
-      visit groups_path(locale: 'en')
+      visit groups_path
       click_on ("New group")
       fill_in "Name", :with => "My new group"
       click_on ("Create group")

@@ -29,6 +29,8 @@ RSpec.configure do |config|
 
   config.before(:each) do
     DatabaseCleaner.start
+
+    app.default_url_options[:locale] = "en"
   end
 
   config.after(:each) do
