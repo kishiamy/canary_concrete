@@ -44,7 +44,6 @@ $linkColorHover:        darken($linkColor, 15%) !default;
 $primaryButtonBackground:    $linkColor !default;
 
 
-
 // COMPONENT VARIABLES
 // --------------------------------------------------
 
@@ -57,6 +56,12 @@ $zindexTooltip:         1020;
 $zindexFixedNavbar:     1030;
 $zindexModalBackdrop:   1040;
 $zindexModal:           1050;
+
+// Header 
+$header-color:          $white
+
+// Form
+$formColor:             $white
 
 // Input placeholder text color
 $placeholderText:       $grayLight !default;
