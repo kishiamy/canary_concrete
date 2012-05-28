@@ -1,0 +1,12 @@
+.row-fluid
+  .content
+    .page-header
+      = link_to groups_path, :class => "btn" do
+        %i.icon-list-alt
+        List all groups
+      = link_to @group, :class => "btn btn-primary" do
+        %i.icon-info-sign.icon-white
+        Show
+      %h1 Editing group
+    = render 'form'
+    
