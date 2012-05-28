@@ -1,7 +1,6 @@
 class DeleteDefaultFromGroupId < ActiveRecord::Migration
-  def up
-  end
 
-  def down
+  def change
+    change_column_default(:users, :group_id, nil)       
   end
 end
