@@ -1,0 +1,23 @@
+.row-fluid
+  .content
+    .page-header
+      = link_to new_group_path, :class => "btn btn-primary" do
+        %i.icon-plus.icon-white
+        New Group
+      %h1 Listing groups
+    %table.table.table-bordered.table-striped.center
+      %thead
+        %tr
+          %th Name
+          %th
+      %tbody
+        - @groups.each do |group|
+          %tr
+            %td= link_to group.name, group_path(group)
+            %td
+              = link_to edit_group_path(group), :class => "btn btn-primary #{group.name}" do
+                %i.icon-pencil.icon-white
+                Edit
+              = link_to group, :class => "btn btn-danger", :confirm => 'Are you sure?', :method => :delete do
+                %i{:class => "icon-trash icon-white"}
+                Delete

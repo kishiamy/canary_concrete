@@ -1,0 +1,22 @@
+.row-fluid
+  .content
+    .page-header
+      %h1 Manage groups
+      %table.table_form
+        %tr
+          %th User
+          %th Change group
+        - @users.each do |user|
+          %tr
+            %td
+              = user.email 
+            %td
+              - if user == current_user
+                - # The current user should not change it own group (admin)
+                - # Show a select-like info, with no buttons
+                = select_tag "dummy", options_for_select([user.group.try(:name)])
+              - else
+                = simple_form_for user, :url => edit_user_group_path(user) do |form|
+                  = form.association :group, :label => false
+                  = form.button :submit, "Change group"
+
