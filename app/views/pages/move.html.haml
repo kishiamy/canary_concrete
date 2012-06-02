@@ -1,0 +1,22 @@
+.row-fluid
+  .content
+    .page-header
+      = link_to pages_path, :class => 'btn' do
+        %i.icon-list-alt
+        List all pages
+      = link_to @page, :class => 'btn btn-primary' do
+        %i.icon-info-sign.icon-white
+        Show
+      %h1 Editing page
+    .span12
+      = simple_form_for(@page,:url => update_location_page_path(@page), :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
+        = f.error_notification
+
+        .form-inputs
+          %ul
+            %li.li_menu
+              %a{:href=>"#"} Nav bar
+              %input{:type=>'radio', :name=>'page[page_id]', :valule => nil}
+            =print_tree_form(Page.tree)
+        .form-actions.control-group
+          = f.button :submit, :class => "btn-primary"

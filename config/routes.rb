@@ -2,9 +2,9 @@ CanaryConcrete::Application.routes.draw do
   resources :pages do
     resources :pages
   end
-
   devise_for :users
-
+  match "pages/:id/move" => "pages#move", :as => :move_page
+  match "pages/:id/update_location" => "pages#update_location", :via => :put, :as => :update_location_page
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -60,8 +60,27 @@ class PagesController < ApplicationController
   def update
     @page = Page.find(params[:id])
 
+    params[:page].delete(:page_id)
     respond_to do |format|
       if @page.update_attributes(params[:page])
+        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
+        format.json { head :no_content }
+      else
+        format.html { render action: "edit" }
+        format.json { render json: @page.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def move
+    @page = Page.find(params[:id])
+  end
+
+  def update_location
+    @page = Page.find(params[:id])
+
+    respond_to do |format|
+      if @page.update_attributes(params[:page][:page_id])
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
         format.json { head :no_content }
       else
