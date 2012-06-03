@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
+  # before_filter :is_admin TODO
   # GET /pages
   # GET /pages.json
+
   def index
     @pages = Page.tree
 
@@ -9,6 +11,7 @@ class PagesController < ApplicationController
       format.json { render json: @pages }
     end
   end
+
 
   # GET /pages/1
   # GET /pages/1.json

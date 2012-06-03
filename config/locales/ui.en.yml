@@ -1,0 +1,12 @@
+en:
+  general:
+    buttons:
+      edit: Edit  
+      delete: Delete
+      move: Move
+    manage:
+      manage_groups:  Manage groups
+      user: User
+      change_group: Change group
+    dummy: Dummy
+

@@ -1,5 +1,4 @@
 module PagesHelper
-
   def breadcrumb(page)
     pages = page.title
     if page.page
