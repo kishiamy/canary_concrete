@@ -1,0 +1,10 @@
+%li.li_menu
+  -if page.id == params["id"].to_i
+    =page.title
+  -else
+    =link_to page.title, '#'
+    %input{:type=>'radio', :name=>'page[page_id]', :valule => page.id}
+-if page[:children]
+  %ul.subpages
+    -page[:children].each do |child|
+      = render :partial =>'liform', :locals => { :page => child }

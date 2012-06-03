@@ -5,4 +5,8 @@
         %i.icon-plus.icon-white
         New Page
       %h1 Listing pages
-    %ul.tree=print_tree(@pages)
+    %ul.tree
+      -@pages.each do |page|
+        = render :partial =>'family', :locals => { :page => page }
+
+

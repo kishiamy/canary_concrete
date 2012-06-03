@@ -74,6 +74,7 @@ class PagesController < ApplicationController
 
   def move
     @page = Page.find(params[:id])
+    @tree = Page.tree
   end
 
   def update_location
