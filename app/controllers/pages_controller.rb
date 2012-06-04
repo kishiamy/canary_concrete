@@ -82,9 +82,14 @@ class PagesController < ApplicationController
 
   def update_location
     @page = Page.find(params[:id])
+    if params[:page][:page_id] == 'nav-bar'
+     @page.page_id = nil 
+    else
+      @page.page_id = params[:page][:page_id].to_i
+    end
 
     respond_to do |format|
-      if @page.update_attributes(params[:page][:page_id])
+      if @page.save
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
         format.json { head :no_content }
       else

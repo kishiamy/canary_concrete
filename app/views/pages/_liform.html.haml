@@ -3,7 +3,7 @@
     =page.title
   -else
     =link_to page.title, '#'
-    %input{:type=>'radio', :name=>'page[page_id]', :valule => page.id}
+    %input{:type=>'radio', :name=>'page[page_id]', :value => page.id}
 -if page[:children]
   %ul.subpages
     -page[:children].each do |child|
