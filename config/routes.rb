@@ -4,14 +4,16 @@ CanaryConcrete::Application.routes.draw do
     resources :groups 
     resources :pages
 
-  devise_for :users
-  match "admin/groups" => "admin#manage_groups", :as => :user_list
-  match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
+    devise_for :users
+    match "admin/groups" => "admin#manage_groups", :as => :user_list
+    match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
 
-  root :to => 'pages#index'
+    root :to => 'pages#index'
+    match "*path", to: "locale#not_found"
   end 
   match '*path', to: redirect("/#{I18n.default_locale}/%{path}")
-  match '', to: redirect("#{I18n.default_locale}")
+  match '', to: redirect("/#{I18n.default_locale}/pages")
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
