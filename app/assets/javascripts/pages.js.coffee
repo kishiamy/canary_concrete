@@ -5,3 +5,8 @@
 #ugly method
 $(document).ready ->
   $('.span4').height($('.span8').height()) if $('.span4').find('a').length > 0
+  $(".checkbox").click ->
+    id = $(@).attr("id")
+    $(@).addClass("selected")
+    $("input[value=#{id}]").click()
+

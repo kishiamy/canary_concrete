@@ -2,8 +2,8 @@
   -if page.id == params["id"].to_i
     =page.title
   -else
-    =link_to page.title, '#'
-    %input{:type=>'radio', :name=>'page[page_id]', :value => page.id}
+    =link_to page.title, '#', :class => "checkbox", :id => page.id
+    %input{:type=>'radio', :name=>'page[page_id]', :value => page.id, :class => 'input-hidde'}
 -if page[:children]
   %ul.subpages
     -page[:children].each do |child|
