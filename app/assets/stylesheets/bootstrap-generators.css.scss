@@ -65,7 +65,7 @@ body {
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important;
-  color: white !important;
+  color: $white !important;
   background-color: $sky-blue !important;
   min-height: 42px;
   min-width: 88px;
@@ -192,3 +192,4 @@ label {
   }
 }
 @import "scss/bootstrap";
+
