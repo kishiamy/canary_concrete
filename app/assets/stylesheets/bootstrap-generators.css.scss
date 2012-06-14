@@ -36,7 +36,8 @@ body {
 // jomjom styles
 .row-fluid {
   background-color: $sky-blue;
-  padding: $gridGutterWidth; 
+  padding: $gridGutterWidth;
+  min-height: 100%; 
 }
 
 .row {
@@ -191,5 +192,16 @@ label {
     }
   }
 }
+.error_paragraph {
+  text-align: center;
+  .error{
+    color: $white;
+    font-size: 80px;
+  }
+}
+.row-fluid-admin{
+  background-color: #091C33;
+  padding:  $gridGutterWidth;
+  min-height: 100%; 
+}
 @import "scss/bootstrap";
-
