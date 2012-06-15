@@ -13,18 +13,6 @@ header{
 body, html{
   background-repeat: no-repeat;
   background-color: #091C33;
-  /* ms gradient */
-  background-image: -ms-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Opera */ 
-  background-image: -o-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #013F7B), color-stop(1, #091C33));
-  /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Proposed W3C Markup */ 
-  background-image: linear-gradient(top, #013F7B 0%, #091C33 100%);
 }
 
 .page-header {
