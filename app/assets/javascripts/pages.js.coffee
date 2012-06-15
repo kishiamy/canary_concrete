@@ -7,6 +7,7 @@ $(document).ready ->
   $('.span4').height($('.span8').height()) if $('.span4').find('a').length > 0
   $(".checkbox").click ->
     id = $(@).attr("id")
-    $(@).addClass("selected")
+    $(".icon-check").removeClass("icon-check").addClass("icon-check-empty")
+    $(@).find("i").removeClass("icon-check-empty").addClass("icon-check")
     $("input[value=#{id}]").click()
 

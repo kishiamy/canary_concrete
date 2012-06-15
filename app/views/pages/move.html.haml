@@ -12,9 +12,11 @@
       = f.error_notification
       %ul.tree
         %li.li_menu
-          %a{:href=>"#", :id => "nav-bar", :class => "checkbox"} Nav bar
+          %a{:href=>"#", :id => "nav-bar", :class => "page-tree checkbox"} 
+            %i.icon-check-empty
+            Nav bar
           %input{:type=>'radio', :class => 'input-hidde',:name=>'page[page_id]', :value => "nav-bar"}
         - @tree.each do |page|
           = render :partial =>'liform', :locals => { :page => page }
       .form-actions.control-group
-        = f.submit 'Update section', :class => "btn-primary" 
+        = f.submit 'Update section', :class => "btn btn-primary" 

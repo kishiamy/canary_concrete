@@ -1,14 +1,12 @@
 %li.li_menu
-  =link_to page.title, page_path(page)
+  =link_to page.title, page_path(page), :class => 'page-tree'
   %div
     =link_to move_page_path(page), :class => 'btn btn-primary btn-tooltip', :title => "Move to other section" do
-      %i.icon-move.icon-white
+      %i.icon-random.icon-white
     =link_to edit_page_path(page), :class => 'btn btn-primary btn-tooltip', :title => "Edit" do
       %i.icon-pencil.icon-white
-      
     =link_to new_page_page_path(page), :class => 'btn btn-primary btn-tooltip', :title => "add sub-page" do
       %i.icon-plus.icon-white
-      
     =link_to page_path(page), :class => 'btn btn-danger btn-tooltip', :title => "Delete", :confirm =>'Are you sure?', :method => :delete do
       %i.icon-trash.icon-white
       

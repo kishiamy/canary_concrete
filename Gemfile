@@ -25,6 +25,7 @@ group :assets do
   gem 'bootstrap-generators'
   gem 'bourbon'
   gem 'uglifier', '>= 1.0.3'
+  gem 'font-awesome-sass-rails'
 end
 
 gem "inherited_resources"
