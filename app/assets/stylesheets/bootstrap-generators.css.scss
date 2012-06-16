@@ -245,6 +245,51 @@ ul.subpages > li:last-of-type, ul.tree > li:last-of-type {
 }
 
 
+.root {
+  font-size: 21px;
+  height: 34px;
+  display: block;
+}
+
+
+.tree_form { 
+  position:relative;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.tree_form, .subpages_form{
+  list-style:none;
+}
+.li_form {
+  position: relative;
+  height: 47px;
+  line-height: 42px;
+  font-size: 21px;
+  margin-left:25px;
+  div {
+    right: 0px;
+    position: absolute;
+    height: 45px;
+    display: inline-block;
+    padding-left: 2px;
+  }
+  a.checkbox {
+    padding-left: 0px;
+  }
+}
+
+.subpages_form  {
+  background: url(vline.png) repeat-y;
+}
+.subpages_form > li, .tree_form > li {
+  background:url('node.png') no-repeat;
+  background-position-y: center;
+}
+ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
+  background:url('last.png') no-repeat;
+  background-position-y: center;
+}
+
 //devise styles
 .devise_content {
   width:303px;

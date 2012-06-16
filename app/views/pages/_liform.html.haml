@@ -1,4 +1,4 @@
-%li.li_menu
+%li.li_form
   -if page.id == params["id"].to_i
     =link_to '#', :class => "page-tree disabled" do
       %i.icon-lock
@@ -6,9 +6,9 @@
   -else
     =link_to '#', :class => "page-tree checkbox", :id => page.id do
       %i.icon-check-empty
-      page.title
+      =page.title
     %input{:type=>'radio', :name=>'page[page_id]', :value => page.id, :class => 'input-hidde'}
 -if page[:children]
-  %ul.subpages
+  %ul.subpages_form
     -page[:children].each do |child|
       = render :partial =>'liform', :locals => { :page => child }

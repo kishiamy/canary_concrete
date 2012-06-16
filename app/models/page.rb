@@ -18,4 +18,23 @@ class Page < ActiveRecord::Base
       tree[index][:children]= bastard.family
     end
   end
+
+  # def child_father_permutation
+  #   if 
+  #   end
+  # end
+
+  def search_in_family(relative)
+    self.family.each do |relation|
+      if relation == relative
+        return true
+      else
+        if relation.search_in_family(relative) != true
+          return false
+        else
+          return true
+        end
+      end
+    end 
+  end
 end
