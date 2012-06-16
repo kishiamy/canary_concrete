@@ -23,18 +23,12 @@ class Page < ActiveRecord::Base
   #   if 
   #   end
   # end
+  def is_descendant_of?(other_page)
+    return false unless other_page
+    self == other_page or self.is_descendant_of? other_page
+  end
 
-  def search_in_family(relative)
-    self.family.each do |relation|
-      if relation == relative
-        return true
-      else
-        if relation.search_in_family(relative) != true
-          return false
-        else
-          return true
-        end
-      end
-    end 
+  def is_ancestor_of?(other_page)
+    other_page.is_descendant_of? self
   end
 end
