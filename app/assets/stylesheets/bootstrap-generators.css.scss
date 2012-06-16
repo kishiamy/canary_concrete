@@ -39,6 +39,11 @@ body {
   padding: $gridGutterWidth;
   min-height: 100%; 
 }
+.row-fluid-admin {
+  background-color: $white; 
+  padding: $gridGutterWidth;
+  min-height: 100%; 
+}
 
 .row {
   background-color: $sky-blue;
