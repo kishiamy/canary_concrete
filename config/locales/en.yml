@@ -196,10 +196,23 @@ en:
       long: ! '%d %B, %Y %H:%M'
       short: ! '%d %b %H:%M'
     pm: pm
-  # remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  #   activemodel:
-  #       errors:
-  #             <<: *errors
-  #               activerecord:
-  #                   errors:
-  #                         <<: *errors
+  users:
+    sign_in:  Sign in
+    user_name:  User name
+    password: Password
+    remember_me:  Remember me
+    forgotten_password?:  Forgotten password?
+  pages:
+    listing_pages: Pages
+    name: Name
+    title: Title
+    content:  Content
+    new_page: New page
+    add-sub-page: Add sub-page
+  groups:
+    new_group:  New group  
+    change_group: Change group 
+    listing_groups: Groups
+  languages:
+    english: English
+    spanish: Spanish
