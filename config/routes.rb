@@ -12,10 +12,12 @@ CanaryConcrete::Application.routes.draw do
     match "admin/groups" => "admin#manage_groups", :as => :user_list
     match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
 
+    match '*dummy', to: "error#error_404"
   end
 
   root to: "pages#index", locale: I18n.default_locale
 
-  match '*dummy', to: "error#error_404"
+  # Capture invalid pages
+  match '*dummy', to: "error#error_404", locale: I18n.default_locale.to_s
 
 end
