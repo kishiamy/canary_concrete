@@ -8,17 +8,25 @@ class ApplicationController < ActionController::Base
     render text: " ", layout: true, status: 403
   end
 
+  rescue_from ActionController::RoutingError do |exception|
+    flash.now[:error] = t('error.page.not_found')
+    render text: " ", layout: true, status: 404
+  end
+
   protected
     def is_admin
       unless user_signed_in? and current_user.group.admin?
         raise AdminUserIsRequired
       end
     end
-  private
+
     def set_locale
-      I18n.locale = params[:locale] || I18n.default_locale
+      params[:locale] ||= I18n.default_locale
+      I18n.locale = params[:locale]
     end
+
     def default_url_options(options = {})
-      {locale: I18n.locale}
+      { locale: I18n.locale }
     end
+
 end
