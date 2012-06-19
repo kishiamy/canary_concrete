@@ -5,7 +5,7 @@
     = f.input :email, :required => true, :autofocus => true
     = f.input :password, :autocomplete => "off", :hint => t('devise.registrations.leave_blank'), :required => false
     = f.input :password_confirmation, :required => false
-    = f.input :current_password, :hint => t('devise.registrations.need_password'), :required => true
+    = f.input :current_password, :label => t('devise.registrations.current_pass'), :hint => t('devise.registrations.need_password'), :required => true
   .actions
     = f.button :submit, t('devise.registrations.update')
 %p= t'devise.registrations.unhappy'

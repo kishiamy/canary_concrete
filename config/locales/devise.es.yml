@@ -45,6 +45,7 @@ es:
     registrations:
       edit: 'Editar'
       leave_blank: 'Déjelo en blanco si no quiere cambiarlo'
+      current_pass: 'Constraseña actual'
       need_password: 'Se necesita su contraseña actual para confirmar los cambios'
       update: 'Actualizar'
       cancel: 'Cancelar mi cuenta'

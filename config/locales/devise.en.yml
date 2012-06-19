@@ -46,6 +46,7 @@ en:
     registrations:
       edit: 'Edit'
       leave_blank: 'leave it blank if you do not want to change it'
+      current_pass: 'Current password'
       need_password: 'we need your current password to confirm your changes'
       update: 'Update'
       cancel: 'Cancel my account'
