@@ -1,4 +1,4 @@
-%h2= t'devise.registrations.edit' #{resource_name.to_s.humanize}
+%h2= t'devise.registrations.edit' 
 = simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => 'form-vertical' }) do |f|
   = f.error_notification
   .inputs
@@ -8,6 +8,6 @@
     = f.input :current_password, :hint => t('devise.registrations.need_password'), :required => true
   .actions
     = f.button :submit, t('devise.registrations.update')
-%h3= t'devise.registrations.cancel'
-%p= t'devise.registrations.unhappy' #{link_to t('.cancel'), registration_path(resource_name), :confirm => t('.sure?'), :method => :delete}.
+%p= t'devise.registrations.unhappy'
+%p= link_to t('devise.registrations.cancel'), registration_path(resource_name), :confirm => t('devise.registrations.sure'), :method => :delete
 = link_to t('devise.registrations.back'), :back

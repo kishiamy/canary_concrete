@@ -38,6 +38,13 @@ body {
   background-color: $sky-blue;
   padding: $gridGutterWidth;
   min-height: 100%; 
+  .error_paragraph {
+    text-align: center;
+    .error{
+      color: $white;
+      font-size: 80px;
+    }
+  }
 }
 
 .row {
@@ -190,13 +197,6 @@ label {
         }
       }
     }
-  }
-}
-.error_paragraph {
-  text-align: center;
-  .error{
-    color: $white;
-    font-size: 80px;
   }
 }
 @import "scss/bootstrap";
