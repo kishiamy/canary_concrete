@@ -8,11 +8,6 @@ class ApplicationController < ActionController::Base
     render text: " ", layout: true, status: 403
   end
 
-  rescue_from ActionController::RoutingError do |exception|
-    flash.now[:error] = t('error.page.not_found')
-    render text: " ", layout: true, status: 404
-  end
-
   protected
     def is_admin
       unless user_signed_in? and current_user.group.admin?
