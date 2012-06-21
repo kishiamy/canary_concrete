@@ -1,8 +1,8 @@
-%h2= t'.resend_unlock'
+%h2= t'devise.sessions.unlock.resend_unlock'
 = simple_form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f|
   = f.error_notification
   .inputs
     = f.input :email, :required => true
   .actions
-    = f.button :submit, t('.resend_unlock')
+    = f.button :submit, t('devise.sessions.unlock.resend_unlock')
 = render 'links'
