@@ -23,7 +23,7 @@ en:
     sessions:
       new:
         sign_in: 'Sign in'
-        sig_up: 'Sign up'
+        sign_up: 'Sign up'
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
       remember: 'Remember me'
