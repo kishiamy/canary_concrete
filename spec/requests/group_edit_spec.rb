@@ -8,7 +8,7 @@ describe "edit group" do
       visit groups_path
       find("a[href='#{edit_group_path(@group)}']").click
       fill_in "Name", :with => "Without permission"
-      click_on ('Update group')
+      click_on 'Update group'
     end
     it "check the name" do
       Group.find_by_name("Without permission").name.should == "Without permission"
