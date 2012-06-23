@@ -239,6 +239,10 @@ ul.subpages > li:last-of-type, ul.tree > li:last-of-type {
   }
 
 }
+ul > ul:last-of-type {
+  background:none;
+}
+
 
 .page-tree {
   margin-left: 24px;

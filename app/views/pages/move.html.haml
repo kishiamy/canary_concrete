@@ -17,6 +17,6 @@
       %input{:type=>'radio', :class => 'input-hidde',:name=>'page[page_id]', :value => "nav-bar"}
       %ul.tree_form
         - @tree.each do |page|
-          = render :partial =>'liform', :locals => { :page => page }
+          = render :partial =>'liform', :locals => { :page => page, :lock => false }
       .form-actions.control-group
         = f.submit 'Update section', :class => "btn btn-primary" 
