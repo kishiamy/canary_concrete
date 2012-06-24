@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "show group" do
     before do
-      @admin = Factory(:admin)
-      @group = Factory(:group, name: "Extras")
+      @admin = FactoryGirl.create(:admin)
+      @group = FactoryGirl.create(:group, name: "Extras")
       login @admin
       visit groups_path
       find("a",  :text => @group.name ).click

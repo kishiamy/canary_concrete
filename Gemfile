@@ -25,7 +25,6 @@ group :assets do
   gem 'bootstrap-generators'
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer'
-  gem 'less-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 

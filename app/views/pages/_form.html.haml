@@ -8,4 +8,4 @@
       = f.association :page
 
     .form-actions.control-group
-      = f.button :submit, :class => "btn-primary"
+      = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage") 

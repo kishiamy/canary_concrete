@@ -207,11 +207,9 @@ es:
     new_group:  nuevo grupo  
     change_group: cambiar grupo 
     listing_groups: lista de grupos
-
-  #remove these aliases after 'activemodel' and 'activerecord' namespaces are removed from Rails repository
-  #   activemodel:
-  #       errors:
-  #             <<: *errors
-  #               activerecord:
-  #                   errors:
-  #                         <<: *errors
+  languages:
+    english: Inglés
+    spanish: Español
+  error:
+    page:
+      not_found: Página no encontrada
