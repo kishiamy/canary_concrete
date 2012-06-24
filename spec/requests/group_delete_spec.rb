@@ -11,6 +11,7 @@ describe "delete group" do
       page.driver.browser.switch_to.alert.accept
     end
     it "group was deleted successfully" do
+      sleep 1
       current_path.should == groups_path
       Group.count.should be_eql (@count - 1)  
     end
