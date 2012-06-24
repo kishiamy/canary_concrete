@@ -2,6 +2,8 @@ class Page < ActiveRecord::Base
   has_many :pages
   belongs_to :page
 
+  validate :page_move_to_correct_location, :on => :update
+
   def family
     components = []
     if self.pages
@@ -16,6 +18,22 @@ class Page < ActiveRecord::Base
     Page.where(:page_id=>nil).each_with_index do |bastard, index|
       tree[index] = bastard
       tree[index][:children]= bastard.family
+    end
+  end
+
+  def family_include?(page)
+    if self.family.include?(page)
+      true
+    else
+      self.family.each do |child|
+        child.family_include?(page)
+      end
+    end
+  end
+
+  def page_move_to_correct_location
+    if self.family_include?(self.page)
+      errors[:base] << "Page don't can move to himself branch"
     end
   end
 
