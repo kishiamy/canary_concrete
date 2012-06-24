@@ -90,10 +90,10 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully updated.' }
+        format.html { redirect_to @page, notice: 'Page was successfully moved.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render action: "move" }
         format.json { render json: @page.errors, status: :unprocessable_entity }
       end
     end

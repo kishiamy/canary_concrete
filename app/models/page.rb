@@ -2,7 +2,7 @@ class Page < ActiveRecord::Base
   has_many :pages
   belongs_to :page
 
-  validate :page_move_to_correct_location, :on => :update
+  # validate :page_move_to_correct_location, :on => :update
 
   def family
     components = []
@@ -22,11 +22,13 @@ class Page < ActiveRecord::Base
   end
 
   def family_include?(page)
-    if self.family.include?(page)
-      true
-    else
-      self.family.each do |child|
-        child.family_include?(page)
+    if page.present?
+      if self.pages.include?(page)
+        self.pages.include?(page)
+      else
+        self.pages.each do |child|
+          child.family_include?(page)
+        end
       end
     end
   end
