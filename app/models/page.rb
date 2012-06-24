@@ -33,7 +33,7 @@ class Page < ActiveRecord::Base
 
   def page_move_to_correct_location
     if self.family_include?(self.page)
-      errors[:base] << "Page don't can move to himself branch"
+      errors[:page_id] << "Page don't can move to himself branch"
     end
   end
 
