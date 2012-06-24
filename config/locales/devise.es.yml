@@ -89,13 +89,13 @@ es:
         click: 'Haga click en el siguiente enlace para desbloquear su cuenta:'
         unlock: 'Desbloquear mi cuenta'
     menu:
-      _login_items:
+      login_items:
         logout: 'Salir'
         login: 'Acceder'
-      _registration_items:
+      registration_items:
         edit: 'Editar registro'
         register: 'Registrar'
-    _links:
+    links:
       sign_in: 'Acceder'
       sign_up: 'Registrar'
       forgot: '¿Olvidó su contraseña?'

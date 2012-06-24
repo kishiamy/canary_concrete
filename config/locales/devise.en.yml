@@ -91,13 +91,13 @@ en:
         click: 'Click the link below to unlock your account:'
         unlock: 'Unlock my account'
     menu:
-      _login_items:
+      login_items:
         logout: 'Logout'
         login: 'Login'
-      _registration_items:
+      registration_items:
         edit: 'Edit registration'
         register: 'Register'
-    _links:
+    links:
       sign_in: 'Sign in'
       sign_up: 'Sign up'
       forgot: 'Forgot your password?'
