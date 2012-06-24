@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "new group" do
     before do
-      @admin = Factory(:admin)
+      @admin = FactoryGirl.create(:admin)
       login @admin
       visit groups_path
       click_on ("New group")

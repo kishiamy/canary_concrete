@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "delete group" do
     before do
-      @admin = Factory(:admin)
-      @group = Factory(:group, name: "Delete_me")
+      @admin = FactoryGirl.create(:admin)
+      @group = FactoryGirl.create(:group, name: "Delete_me")
       login @admin
       @count = Group.count
       visit groups_path

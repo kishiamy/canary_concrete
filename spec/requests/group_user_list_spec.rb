@@ -2,9 +2,9 @@ require "spec_helper"
 
 describe "manage groups" do
   before do
-    @admin = Factory(:admin)
-    @group = Factory(:group, name: "Bot")
-    @user = Factory(:user)
+    @admin = FactoryGirl.create(:admin)
+    @group = FactoryGirl.create(:group, name: "Bot")
+    @user = FactoryGirl.create(:user)
     login @admin
     visit user_list_path
     find("#edit_user_#{@user.id} select").select("Bot")

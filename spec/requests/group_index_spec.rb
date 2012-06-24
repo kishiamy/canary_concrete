@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "groups index" do
   describe "admin visit" do
     before do
-      @admin = Factory(:admin)
+      @admin = FactoryGirl.create(:admin)
       login @admin
     end
 
@@ -15,7 +15,7 @@ describe "groups index" do
 
   describe "user visit" do
     before do
-      @user = Factory(:user)
+      @user = FactoryGirl.create(:user)
       login @user
     end
 
