@@ -118,17 +118,30 @@ footer {
 }
 // titles text
 h1 {
-  color: $white !important;
-  font-size: $title-text !important;
+  color:  $white !important;
+  font-size:  $title-text !important;
+}
+h1-admin{
+  color:  $black;
+  font-size:  $title-text;
 }
 h2 {
-  color: $white !important; 
-  font-size: $title-text; 
+  color:  $white !important; 
+  font-size:  $title-text; 
   text-transform:uppercase;
 }
+h2-admin {
+  color:  $black;
+  font-size:  $title-text;
+  text-transfrom:uppercase;
+}
 h3 {
-  color: $white !important; 
-  font-size: $title-text; 
+  color:  $white !important; 
+  font-size:  $title-text; 
+}
+h3-admin {
+  color:  $black;
+  font-size:  $title-text;
 }
 // adapt icons height in buttons
 a > i {
