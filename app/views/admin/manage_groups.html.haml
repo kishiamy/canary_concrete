@@ -1,11 +1,11 @@
 .row-fluid
   .content
     .page-header
-      %h1 Manage groups
+      %h1= t'general.manage.manage_groups'
       %table.table_form
         %tr
-          %th User
-          %th Change group
+          %th= t'general.manage.user'
+          %th= t'general.manage.change_group'
         - @users.each do |user|
           %tr
             %td
@@ -18,5 +18,4 @@
               - else
                 = simple_form_for user, :url => edit_user_group_path(user) do |form|
                   = form.association :group, :label => false
-                  = form.button :submit, "Change group"
-
+                  = form.button :submit, t('general.manage.change_group')

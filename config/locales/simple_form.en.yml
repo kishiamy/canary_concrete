@@ -10,15 +10,21 @@ en:
       # html: '<abbr title="required">*</abbr>'
     error_notification:
       default_message: "Some errors were found, please take a look:"
-    # Labels and hints examples
-    # labels:
-    #   password: 'Password'
-    #   user:
-    #     new:
-    #       email: 'E-mail para efetuar o sign in.'
-    #     edit:
-    #       email: 'E-mail.'
-    # hints:
-    #   username: 'User name to sign in.'
-    #   password: 'No special characters, please.'
-
+    labels:
+      user:
+        password: 'Password'
+        email: 'E-mail'
+        remember_me: 'Remember me'
+        password_confirmation: 'Password confirmation'
+      page:
+        title: 'Title'
+        content: 'Content' 
+        page: 'Page'
+        submit: 'Create page'
+    hints:
+      username: 'User name to sign in'
+      password: 'No special characters, please.'
+    
+  sign_up: 'Sign up'
+  forgot: 'Forgot your password?'
+  sign_in: 'Sign in'

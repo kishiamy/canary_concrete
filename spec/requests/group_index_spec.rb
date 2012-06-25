@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "groups index" do
   describe "admin visit" do
     before do
-      @admin = Factory(:admin)
+      @admin = FactoryGirl.create(:admin)
       login @admin
     end
 
@@ -15,20 +15,20 @@ describe "groups index" do
 
   describe "user visit" do
     before do
-      @user = Factory(:user)
+      @user = FactoryGirl.create(:user)
       login @user
     end
 
     it "has alert" do
       visit groups_path
-      page.should have_content("You don't have permission to be here!")
+      page.should have_content("You do not have permission to be here!")
     end
   end
 
   describe "without login" do
     it "user without login" do
       visit groups_path
-      page.should have_content("You don't have permission to be here!")
+      page.should have_content("You do not have permission to be here!")
     end
   end
 end

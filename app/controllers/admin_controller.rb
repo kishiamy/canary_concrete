@@ -16,7 +16,7 @@ class AdminController < ApplicationController
 
     respond_to do |format|
       if @user.save!
-        format.html { redirect_to user_list_path, notice: 'Group was successfully updated.' }
+        format.html { redirect_to user_list_path, notice: t('general.controllers.notice') }
         format.json { head :no_content }
       else
         format.html { render action: "manage_groups" }

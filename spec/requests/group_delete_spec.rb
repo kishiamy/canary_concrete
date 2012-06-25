@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe "delete group" do
     before do
-      @admin = Factory(:admin)
-      @group = Factory(:group, name: "Delete_me")
+      @admin = FactoryGirl.create(:admin)
+      @group = FactoryGirl.create(:group, name: "Delete_me")
       login @admin
       @count = Group.count
       visit groups_path
@@ -11,6 +11,7 @@ describe "delete group" do
       page.driver.browser.switch_to.alert.accept
     end
     it "group was deleted successfully" do
+      sleep 1
       current_path.should == groups_path
       Group.count.should be_eql (@count - 1)  
     end
