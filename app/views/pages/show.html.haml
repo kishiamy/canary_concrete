@@ -2,10 +2,10 @@
   .page-header
     = link_to edit_page_path(@page), :class => 'btn btn-primary' do
       %i.icon-pencil.icon-white
-      Edit
+      = t'general.buttons.edit'
     = link_to pages_path, :class => 'btn' do
       %i.icon-list-alt
-      List all pages
+      = t'general.manage.list_pages'
     = breadcrumb(@page)
   .span4.border-right-blue
     - if @page.pages.first != nil

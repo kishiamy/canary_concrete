@@ -1,0 +1,27 @@
+es:
+  simple_form:
+    "yes": "Sí"
+    "no": "No"
+    required:
+      text: "requerido"
+      mark: "*"
+    error_notification:
+      default_message: "Se encontraron errores, por favor revise los campos:"
+    labels:
+      user:
+        password: 'Contraseña'
+        email: 'Email'
+        remember_me: 'Recordarme'
+        password_confirmation: 'Repita contraseña'
+      page:
+        title: 'Título'
+        content: 'Contenido'
+        page: 'Página'
+        submit: 'asdfasdf'
+    hints:
+      username: 'Nombre de usuario para acceder'
+      password: 'Sin caracteres especiales, por favor.'
+    
+  sign_up: 'Registrarse'
+  forgot: '¿Olvidó su contraseña?' 
+  sign_in: 'Acceder'

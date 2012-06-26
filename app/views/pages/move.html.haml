@@ -3,19 +3,19 @@
     .page-header
       = link_to pages_path, :class => 'btn' do
         %i.icon-list-alt
-        List all pages
-      %h1 Moving page
+        = t'general.manage.list_of_pages'
+      %h1= t'general.manage.moving_page'
     = simple_form_for(@page,:url => update_location_page_path(@page), :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
       - @page.errors.messages.each do |m|
         .alert.alert-error= m[1][0]
       - if @page.page.blank?
         %a{:href=>"#", :id => "nav-bar", :class => "root"} 
           %i.icon-lock
-          Navigation bar
+          = t'general.manage.navigation_bar'
       - else
         %a{:href=>"#", :id => "nav-bar", :class => "checkbox root"} 
           %i.icon-check-empty
-          Navigation bar
+          = t'general.manage.navigation_bar'
         %input{:type=>'radio', :class => 'input-hidde',:name=>'page[page_id]', :value => "nav-bar"}
       %ul.tree_form
         - Page.tree.each do |page|

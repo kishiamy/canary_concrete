@@ -30,6 +30,15 @@ body, html{
   background-color: $sky-blue;
   padding: $gridGutterWidth;
   width:auto;
+  min-height: 100%; 
+  .error_paragraph {
+    padding-top: 40px;
+    text-align: center;
+    .error{
+      color: $textColor;
+      font-size: 80px;
+    }
+  }
 }
 
 .row {

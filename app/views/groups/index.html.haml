@@ -3,12 +3,12 @@
     .page-header
       = link_to new_group_path, :class => "btn btn-primary" do
         %i.icon-plus.icon-white
-        New Group
-      %h1 Listing groups
+        = t'general.manage.new_group'
+      %h1= t'general.manage.list_groups'
     %table.table.table-bordered.table-striped.center
       %thead
         %tr
-          %th Name
+          %th= t'general.manage.name'
           %th
       %tbody
         - @groups.each do |group|
@@ -17,7 +17,7 @@
             %td
               = link_to edit_group_path(group), :class => "btn btn-primary #{group.name}" do
                 %i.icon-pencil.icon-white
-                Edit
-              = link_to group, :class => "btn btn-danger", :confirm => 'Are you sure?', :method => :delete do
+                = t'general.buttons.edit'
+              = link_to group, :class => "btn btn-danger", :confirm => t('general.manage.sure'), :method => :delete do
                 %i{:class => "icon-trash icon-white"}
-                Delete
+                = t'general.buttons.delete'

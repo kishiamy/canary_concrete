@@ -4,4 +4,4 @@
     .form-inputs
       = f.input :name
     .form-actions
-      = f.button :submit
+      = f.button :submit, t(@group.new_record? ? "create_group" : "update_group", scope: "general.manage")
