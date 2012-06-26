@@ -4,18 +4,19 @@
       = link_to pages_path, :class => 'btn' do
         %i.icon-list-alt
         List all pages
-      = link_to @page, :class => 'btn btn-primary' do
-        %i.icon-info-sign.icon-white
-        Show
       %h1 Moving page
     = simple_form_for(@page,:url => update_location_page_path(@page), :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
       - @page.errors.messages.each do |m|
         .alert.alert-error= m[1][0]
-
-      %a{:href=>"#", :id => "nav-bar", :class => "checkbox root"} 
-        %i.icon-check-empty
-        Navigation bar
-      %input{:type=>'radio', :class => 'input-hidde',:name=>'page[page_id]', :value => "nav-bar"}
+      - if @page.page.blank?
+        %a{:href=>"#", :id => "nav-bar", :class => "root"} 
+          %i.icon-lock
+          Navigation bar
+      - else
+        %a{:href=>"#", :id => "nav-bar", :class => "checkbox root"} 
+          %i.icon-check-empty
+          Navigation bar
+        %input{:type=>'radio', :class => 'input-hidde',:name=>'page[page_id]', :value => "nav-bar"}
       %ul.tree_form
         - Page.tree.each do |page|
           = render :partial =>'liform', :locals => { :page => page, :lock => false }

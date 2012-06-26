@@ -81,7 +81,7 @@ class PagesController < ApplicationController
 
   def update_location
     @page = Page.find(params[:id])
-    if params[:page][:page_id] == 'nav-bar'
+    if params[:page].blank? or params[:page][:page_id] == 'nav-bar'
      @page.page_id = nil 
     else
       @page.page_id = params[:page][:page_id].to_i
@@ -89,7 +89,7 @@ class PagesController < ApplicationController
 
     respond_to do |format|
       if @page.save
-        format.html { redirect_to @page, notice: 'Page was successfully moved.' }
+        format.html { redirect_to pages_path, notice: 'Page was successfully moved.' }
         format.json { head :no_content }
       else
         format.html { render action: "move" }

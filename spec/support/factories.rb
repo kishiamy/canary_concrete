@@ -21,5 +21,6 @@ FactoryGirl.define do
   factory :page do |p|
     p.title      "index"
     p.content    "page index"
+    p.page_id    nil
   end
 end
