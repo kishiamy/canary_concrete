@@ -22,7 +22,9 @@ body {
   /* Proposed W3C Markup */ 
   background-image: linear-gradient(top, #013F7B 0%, #091C33 100%);
 }
-
+#admin-body{
+  background-color: $gray;
+}
 .page-header {
   min-height: 30px;
   a.btn {
