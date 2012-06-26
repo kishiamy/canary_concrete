@@ -19,7 +19,7 @@ CanaryConcrete::Application.routes.draw do
     match '*dummy', to: "error#error_404"
   end
 
-  root to: "pages#index", locale: I18n.default_locale
+  root :to => redirect("/#{I18n.default_locale}/")
 
   # Capture invalid pages
   match '*dummy', to: "error#error_404", locale: I18n.default_locale.to_s
