@@ -9,14 +9,15 @@
         Show
       %h1 Moving page
     = simple_form_for(@page,:url => update_location_page_path(@page), :defaults => { :input_html => { :class => 'input-xxlarge' } }) do |f|
-      = f.error_notification
+      - @page.errors.messages.each do |m|
+        .alert.alert-error= m[1][0]
 
       %a{:href=>"#", :id => "nav-bar", :class => "checkbox root"} 
         %i.icon-check-empty
         Navigation bar
       %input{:type=>'radio', :class => 'input-hidde',:name=>'page[page_id]', :value => "nav-bar"}
       %ul.tree_form
-        - @tree.each do |page|
+        - Page.tree.each do |page|
           = render :partial =>'liform', :locals => { :page => page, :lock => false }
       .form-actions.control-group
         = f.submit 'Update section', :class => "btn btn-primary" 

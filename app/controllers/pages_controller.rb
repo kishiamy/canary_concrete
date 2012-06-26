@@ -1,8 +1,8 @@
 class PagesController < ApplicationController
-  # before_filter :is_admin TODO
+  before_filter :is_admin, :except => :show
+
   # GET /pages
   # GET /pages.json
-
   def index
     @pages = Page.tree
 
@@ -77,7 +77,6 @@ class PagesController < ApplicationController
 
   def move
     @page = Page.find(params[:id])
-    @tree = Page.tree
   end
 
   def update_location
