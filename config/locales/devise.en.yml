@@ -23,7 +23,7 @@ en:
     sessions:
       new:
         sign_in: 'Sign in'
-        sig_up: 'Sign up'
+        sign_up: 'Sign up'
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
       remember: 'Remember me'
@@ -46,6 +46,7 @@ en:
     registrations:
       edit: 'Edit'
       leave_blank: 'leave it blank if you do not want to change it'
+      current_pass: 'Current password'
       need_password: 'we need your current password to confirm your changes'
       update: 'Update'
       cancel: 'Cancel my account'
@@ -90,13 +91,13 @@ en:
         click: 'Click the link below to unlock your account:'
         unlock: 'Unlock my account'
     menu:
-      _login_items:
+      login_items:
         logout: 'Logout'
         login: 'Login'
-      _registration_items:
+      registration_items:
         edit: 'Edit registration'
         register: 'Register'
-    _links:
+    links:
       sign_in: 'Sign in'
       sign_up: 'Sign up'
       forgot: 'Forgot your password?'

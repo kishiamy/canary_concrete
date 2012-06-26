@@ -14,11 +14,14 @@ class ApplicationController < ActionController::Base
         raise AdminUserIsRequired
       end
     end
-  private
+
     def set_locale
-      I18n.locale = params[:locale] || I18n.default_locale
+      params[:locale] ||= I18n.default_locale
+      I18n.locale = params[:locale]
     end
+
     def default_url_options(options = {})
-      {locale: I18n.locale}
+      { locale: I18n.locale }
     end
+
 end

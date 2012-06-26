@@ -5,5 +5,5 @@ class Group < ActiveRecord::Base
   def admin?
     name == "Admin"
   end
-end
 
+end

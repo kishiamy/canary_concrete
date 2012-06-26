@@ -1,8 +1,7 @@
 .span12
-
   = simple_form_for(@group, :defaults => { :input_html => { :class => "input-xxlarge" } }) do |f|
     = f.error_notification
     .form-inputs
       = f.input :name
     .form-actions
-      = f.button :submit, submit_label
+      = f.button :submit, t(@group.new_record? ? "create_group" : "update_group", scope: "general.manage")

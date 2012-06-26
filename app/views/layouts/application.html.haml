@@ -4,16 +4,16 @@
     %meta{:charset => "utf-8"}
     %title Canary Concrete
     %li
-      = raw(link_to_unless_current "English", locale: "en") 
+      = link_to_unless_current t('languages.english'), locale: "en"
       |
-      = raw(link_to_unless_current  "Español", locale: "es")
+      = link_to_unless_current t('languages.spanish'), locale: "es"
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
 
     / Le HTML5 shim, for IE6-8 support of HTML5 elements
     /[if lt IE 9]
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags

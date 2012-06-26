@@ -38,6 +38,14 @@ body {
   background-color: $sky-blue;
   padding: $gridGutterWidth;
   min-height: 100%; 
+  .error_paragraph {
+    padding-top: 40px;
+    text-align: center;
+    .error{
+      color: $textColor;
+      font-size: 80px;
+    }
+  }
 }
 .row-fluid-admin {
   background-color: $white; 
@@ -46,6 +54,7 @@ body {
 }
 
 .row {
+  width: 303px;
   background-color: $sky-blue;
   padding: $gridGutterWidth;
 }
@@ -71,7 +80,7 @@ body {
   -webkit-border-radius: 0px !important;
   -moz-border-radius: 0px !important;
   border-radius: 0px !important;
-  color: $white !important;
+  color: $navbarLinkColorHover !important;
   background-color: $sky-blue !important;
   min-height: 42px;
   min-width: 88px;
@@ -103,7 +112,6 @@ footer {
   }
 }
 
-
 // HOVER EFFECT
 // ------------
 // Placed here since it has to come after the potential zebra striping
@@ -118,30 +126,17 @@ footer {
 }
 // titles text
 h1 {
-  color:  $white !important;
-  font-size:  $title-text !important;
-}
-h1-admin{
-  color:  $black;
-  font-size:  $title-text;
+  color: $textColor !important;
+  font-size: $title-text !important;
 }
 h2 {
-  color:  $white !important; 
-  font-size:  $title-text; 
+  color: $textColor !important; 
+  font-size: $title-text; 
   text-transform:uppercase;
-}
-h2-admin {
-  color:  $black;
-  font-size:  $title-text;
-  text-transfrom:uppercase;
 }
 h3 {
   color:  $white !important; 
   font-size:  $title-text; 
-}
-h3-admin {
-  color:  $black;
-  font-size:  $title-text;
 }
 // adapt icons height in buttons
 a > i {
@@ -149,7 +144,7 @@ a > i {
 }
 //forms
 label {
-  color: $white !important;
+  color: $formColor !important;
 }
 .table_form{
   margin-top:10px;
@@ -178,7 +173,6 @@ label {
     width: 303px;
   }
 }
-
 .devise_row-fluid {
   width: 293px;
   background-color: $sky-blue;
@@ -208,13 +202,6 @@ label {
         }
       }
     }
-  }
-}
-.error_paragraph {
-  text-align: center;
-  .error{
-    color: $white;
-    font-size: 80px;
   }
 }
 @import "scss/bootstrap";

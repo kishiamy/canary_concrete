@@ -216,3 +216,6 @@ en:
   languages:
     english: English
     spanish: Spanish
+  error:
+    page:
+      not_found: Page not found

@@ -45,7 +45,8 @@ es:
     registrations:
       edit: 'Editar'
       leave_blank: 'Déjelo en blanco si no quiere cambiarlo'
-      need_password: 'Se necesita su contraseña acutal para confirmar los cambios'
+      current_pass: 'Constraseña actual'
+      need_password: 'Se necesita su contraseña actual para confirmar los cambios'
       update: 'Actualizar'
       cancel: 'Cancelar mi cuenta'
       unhappy: '¿Insatisfecho?'
@@ -88,13 +89,13 @@ es:
         click: 'Haga click en el siguiente enlace para desbloquear su cuenta:'
         unlock: 'Desbloquear mi cuenta'
     menu:
-      _login_items:
+      login_items:
         logout: 'Salir'
         login: 'Acceder'
-      _registration_items:
+      registration_items:
         edit: 'Editar registro'
         register: 'Registrar'
-    _links:
+    links:
       sign_in: 'Acceder'
       sign_up: 'Registrar'
       forgot: '¿Olvidó su contraseña?'

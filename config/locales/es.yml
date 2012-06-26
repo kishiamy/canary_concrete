@@ -210,3 +210,6 @@ es:
   languages:
     english: Inglés
     spanish: Español
+  error:
+    page:
+      not_found: Página no encontrada
