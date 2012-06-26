@@ -1,8 +1,10 @@
 CanaryConcrete::Application.routes.draw do
 
-  scope ":locale", locale: /#{I18n.available_locales.join('|')}/ do
+  root :to => redirect("/#{I18n.default_locale}/")
 
-    root :to => 'pages#index'
+
+  scope ":locale", locale: /#{I18n.available_locales.join('|')}/ do
+    root :to => 'pages#show', :id => Page.first.id
 
     devise_for :users
 
@@ -18,10 +20,6 @@ CanaryConcrete::Application.routes.draw do
 
     match '*dummy', to: "error#error_404"
   end
-
-  root :to => redirect("/#{I18n.default_locale}/")
-
   # Capture invalid pages
   match '*dummy', to: "error#error_404", locale: I18n.default_locale.to_s
-
 end
