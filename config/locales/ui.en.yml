@@ -33,6 +33,7 @@ en:
       update_page: Update page
       moving_page: Moving page
       navigation_bar: Navigation bar
+      update_section: Update section
     controllers:
       notice: 'Group was successfully updated.'
       forbiden: 'You do not have permission to be here!'

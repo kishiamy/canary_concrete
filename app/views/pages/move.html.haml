@@ -21,4 +21,4 @@
         - Page.tree.each do |page|
           = render :partial =>'liform', :locals => { :page => page, :lock => false }
       .form-actions.control-group
-        = f.submit 'Update section', :class => "btn btn-primary" 
+        = f.submit t('general.manage.update_section'), :class => "btn btn-primary" 
