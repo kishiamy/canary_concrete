@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe "delete page" do
   before do
-    @admin = Factory(:admin)
-    Factory(:page)
-    @page = Factory(:page, title: "hello")
+    @admin = FactoryGirl.create(:admin)
+    FactoryGirl.create(:page)
+    @page = FactoryGirl.create(:page, title: "hello")
     @count = Page.count
     login @admin
     visit pages_path

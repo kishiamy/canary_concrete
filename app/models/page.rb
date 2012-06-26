@@ -32,8 +32,10 @@ class Page < ActiveRecord::Base
   end
 
   def page_move_to_correct_location
-    if page.parents.include?(self)
-      errors[:Page] << ("Page don't can move to own branch")
+    if page.present?
+      if page.parents.include?(self)
+        errors[:Page] << ("Page don't can move to own branch")
+      end
     end
   end
 

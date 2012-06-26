@@ -11,7 +11,6 @@ describe "edit page" do
       click_on "Update Page"
     end
     it "check the title" do
-      debugger
       Page.find_by_title("Page updated").title.should == "Page updated"
     end
 end
