@@ -4,6 +4,7 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "mysql2"
+gem "globalize3"
 
 group :test do
   gem "rspec-rails", :group => [:test, :development]
