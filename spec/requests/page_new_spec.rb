@@ -5,9 +5,9 @@ describe "new pages" do
       @admin = FactoryGirl.create(:admin)
       login @admin
       visit pages_path
-      click_on ("New Page")
+      click_on ("New page")
       fill_in "Title", :with => "test page"
-      click_on ("Create Page")
+      click_on ("Create page")
     end
     it "check the title" do
       Page.find_by_title("test page").title.should == "test page"

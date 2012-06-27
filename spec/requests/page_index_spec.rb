@@ -21,14 +21,14 @@ describe "pages index" do
 
     it "has alert" do
       visit pages_path
-      page.should have_content("You don't have permission to be here!")
+      page.should have_content("You do not have permission to be here!")
     end
   end
 
   describe "without login" do
     it "user without login" do
       visit pages_path
-      page.should have_content("You don't have permission to be here!")
+      page.should have_content("You do not have permission to be here!")
     end
   end
 end

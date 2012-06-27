@@ -4,7 +4,11 @@ CanaryConcrete::Application.routes.draw do
 
 
   scope ":locale", locale: /#{I18n.available_locales.join('|')}/ do
-    root :to => 'pages#show', :id => Page.first.id
+    if Rails.env.test?  
+      root :to => 'pages#index'
+    else
+      root :to => 'pages#show', :id => Page.first.id
+    end
 
     devise_for :users
 
