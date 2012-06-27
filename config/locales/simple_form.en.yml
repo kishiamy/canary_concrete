@@ -20,7 +20,6 @@ en:
         title: 'Title'
         content: 'Content' 
         page: 'Page'
-        submit: 'Create page'
     hints:
       username: 'User name to sign in'
       password: 'No special characters, please.'

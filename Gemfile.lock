@@ -30,6 +30,7 @@ GEM
       multi_json (~> 1.0)
     addressable (2.2.8)
     arel (3.0.2)
+    batch_translations (0.1.2)
     bcrypt-ruby (3.0.1)
     bootstrap-generators (2.0.1)
       railties (~> 3.1)
@@ -210,6 +211,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  batch_translations
   bootstrap-generators
   capybara
   capybara-firebug
