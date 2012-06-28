@@ -5,25 +5,8 @@
         %i.icon-plus.icon-white
         = t'general.manage.new_page'
       %h1= t'general.manage.list_of_pages'
-    %table.table.table-bordered.table-striped.center
-      %thead
-        %tr
-          %th= t'general.manage.title'
-          %th= t'general.manage.page_father'
-          %th= t'general.manage.actions'
-
-      %tbody
-        - @pages.each do |p|
-          %tr
-            %td= link_to p.title, p 
-            %td= p.page.title if p.page
-            %td
-              = link_to edit_page_path(p), :class => 'btn btn-primary' do
-                %i.icon-pencil.icon-white
-                = t'general.buttons.edit'
-              = link_to p, :class => 'btn btn-danger',:confirm => t('general.manage.sure'), :method => :delete do
-                %i{:class =>'icon-trash icon-white'} 
-                = t'general.buttons.delete'
+    %ul.tree
+      -@pages.each do |page|
+        = render :partial =>'family', :locals => { :page => page }
 
 
-    = pages_tree

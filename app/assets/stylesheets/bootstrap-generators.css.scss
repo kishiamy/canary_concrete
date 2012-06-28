@@ -1,26 +1,18 @@
 @import "bootstrap-variables";
+@import "scss/bootstrap";
+@import 'font-awesome';
 header{
   background-image:url('cab.png');
   background-repeat: no-repeat;
   height: 184px;
   width: 184px;
 }
-body {
+.container {
+  width:1024px;
+}
+body, html{
   background-repeat: no-repeat;
-  background-color: #091C33 !important;
-  padding-bottom: 40px;
-  /* ms gradient */
-  background-image: -ms-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Mozilla Firefox */ 
-  background-image: -moz-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Opera */ 
-  background-image: -o-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Webkit (Safari/Chrome 10) */ 
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #013F7B), color-stop(1, #091C33));
-  /* Webkit (Chrome 11+) */ 
-  background-image: -webkit-linear-gradient(top, #013F7B 0%, #091C33 100%);
-  /* Proposed W3C Markup */ 
-  background-image: linear-gradient(top, #013F7B 0%, #091C33 100%);
+  background-color: #091C33;
 }
 
 .page-header {
@@ -37,6 +29,7 @@ body {
 .row-fluid {
   background-color: $sky-blue;
   padding: $gridGutterWidth;
+  width:auto;
   min-height: 100%; 
   .error_paragraph {
     padding-top: 40px;
@@ -54,6 +47,23 @@ body {
   padding: $gridGutterWidth;
 }
 
+.btn {
+  @include border-radius(0px);
+  padding: 12px 16px;
+  background-image: none;
+  text-shadow: none;
+  @include box-shadow(none);
+  background-color: #DDD;
+  border-color: transparent;
+}
+
+.btn-danger {
+  background-color: $red;
+}
+
+.btn-primary {
+  background-color: $primaryButtonBackground;
+}
 // helpers
 .float-right {
   float: right;
@@ -70,23 +80,50 @@ body {
 }
 
 // override nav bar
-
+.nav-menu {
+  list-style: none;
+  height:42px;
+  margin-bottom:20px;
+  margin-left:0px;
+  margin-top:10px;
+  li {
+    margin-left: 1%;
+    width: 11.625%;
+    max-width: 11.625%;
+    float:left;
+    &:first-of-type {
+      margin-left: 0px ;
+      margin-right: 2px ;
+    }
+    a {
+      display:inline-block;
+      color: white;
+      text-decoration:none;
+      background-color: $sky-blue;
+      min-height: 42px;
+      width: 100%;
+      max-width: 100%;
+      text-align: center;
+      line-height: 42px;
+    }
+  }
+}
 .nav-pills > li > a {
-  -webkit-border-radius: 0px !important;
-  -moz-border-radius: 0px !important;
-  border-radius: 0px !important;
-  color: $navbarLinkColorHover !important;
-  background-color: $sky-blue !important;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: $navbarLinkColorHover;
+  background-color: $sky-blue;
   min-height: 42px;
   min-width: 88px;
   text-align: center;
-  line-height: 42px !important;
+  line-height: 42px;
 }
 .nav-pills > li {
   margin-left: 4px;
 }
 .nav-pills > li:first-of-type {
-  margin-left: 0px !important;
+  margin-left: 0px;
 }
 
 //footer styles
@@ -106,7 +143,12 @@ footer {
     }                           
   }
 }
-
+.table-bordered {
+  @include border-radius(0px);
+}
+.table th, .table td  {
+  vertical-align: inherit;
+}
 
 // HOVER EFFECT
 // ------------
@@ -118,20 +160,20 @@ footer {
   }
 }
 .reduce_width{
-  width: auto !important;
+  width: auto;
 }
 // titles text
 h1 {
-  color: $textColor !important;
-  font-size: $title-text !important;
+  color: $textColor;
+  font-size: $title-text;
 }
 h2 {
-  color: $textColor !important; 
+  color: $textColor; 
   font-size: $title-text; 
   text-transform:uppercase;
 }
 h3 {
-  color: $textColor !important; 
+  color: $textColor; 
   font-size: $title-text; 
 }
 // adapt icons height in buttons
@@ -140,7 +182,7 @@ a > i {
 }
 //forms
 label {
-  color: $formColor !important;
+  color: $formColor;
 }
 .table_form{
   margin-top:10px;
@@ -152,13 +194,115 @@ label {
     }
   }
 }
-
-.form-actions {
-  margin-top: 0px !important;
-  margin-bottom: 0px !important;
-  background-color: transparent !important;
-  border-top: 0px !important;
+input[type="radio"] {
+  display:none;
 }
+.form-actions {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  background-color: transparent;
+  border-top: 0px;
+}
+//tree styles
+.tree { 
+  position:relative;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.tree, .subpages{
+  list-style:none;
+}
+.li_menu {
+  position: relative;
+  height: 47px;
+  line-height: 42px;
+  font-size: 21px;
+  margin-left:25px;
+  div {
+    right: 0px;
+    position: absolute;
+    height: 45px;
+    display: inline-block;
+    padding-left: 2px;
+  }
+  &:hover {
+    background-color: $treeHover;
+  }
+  a.checkbox {
+    padding-left: 0px;
+  }
+}
+
+.subpages  {
+  background: url(vline.png) repeat-y;
+}
+.subpages > li, .tree > li {
+  background:url('node.png') no-repeat;
+  background-position-y: center;
+}
+ul.subpages > li:last-of-type, ul.tree > li:last-of-type {
+  background:url('last.png') no-repeat;
+  background-position-y: center;
+  &:hover {
+    background-color: $treeHover;
+  }
+
+}
+ul > ul:last-of-type {
+  background:none;
+}
+
+
+.page-tree {
+  margin-left: 24px;
+}
+
+
+.root {
+  font-size: 21px;
+  height: 34px;
+  display: block;
+}
+
+
+.tree_form { 
+  position:relative;
+  margin: 0 0 0 0;
+  padding: 0;
+}
+.tree_form, .subpages_form{
+  list-style:none;
+}
+.li_form {
+  position: relative;
+  height: 47px;
+  line-height: 42px;
+  font-size: 21px;
+  margin-left:25px;
+  div {
+    right: 0px;
+    position: absolute;
+    height: 45px;
+    display: inline-block;
+    padding-left: 2px;
+  }
+  a.checkbox {
+    padding-left: 0px;
+  }
+}
+
+.subpages_form  {
+  background: url(vline.png) repeat-y;
+}
+.subpages_form > li, .tree_form > li {
+  background:url('node.png') no-repeat;
+  background-position-y: center;
+}
+ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
+  background:url('last.png') no-repeat;
+  background-position-y: center;
+}
+
 //devise styles
 .devise_content {
   width:303px;
@@ -199,5 +343,4 @@ label {
       }
     }
   }
-}
-@import "scss/bootstrap";
+} 

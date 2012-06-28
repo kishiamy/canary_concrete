@@ -1,0 +1,16 @@
+%li.li_menu
+  =link_to page.title, page_path(page), :class => 'page-tree'
+  %div
+    =link_to move_page_path(page), :class => 'btn btn-primary btn-tooltip', :title => t("general.buttons.move") do
+      %i.icon-random.icon-white
+    =link_to edit_page_path(page), :class => 'btn btn-primary btn-tooltip', :title => t('general.buttons.edit') do
+      %i.icon-pencil.icon-white
+    =link_to new_page_page_path(page), :class => 'btn btn-primary btn-tooltip', :title => t("general.buttons.add_sub_page") do
+      %i.icon-plus.icon-white
+    =link_to page_path(page), :class => 'btn btn-danger btn-tooltip', :title => t('general.buttons.delete'), :confirm => t('general.manage.sure'), :method => :delete do
+      %i.icon-trash.icon-white
+      
+-if page[:children]
+  %ul.subpages
+    -page[:children].each do |child|
+      = render :partial =>'family', :locals => { :page => child }
