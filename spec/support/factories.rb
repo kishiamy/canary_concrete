@@ -18,4 +18,9 @@ FactoryGirl.define do
   factory :group_admin, :parent => :group  do |g|
    g.name "Admin"
   end
+  factory :page do |p|
+    p.title      "index"
+    p.content    "page index"
+    p.page_id    nil
+  end
 end
