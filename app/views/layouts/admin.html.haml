@@ -23,17 +23,17 @@
               =render "devise/menu/login_items"
               %li.dropdown
                 %a{:href => "#menu1", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
-                  Groups
+                  =t"groups"
                   %b.caret
                 %ul.dropdown-menu
                   =link_to t"general.manage.manage_groups" 
               %li.dropdown
                 %a{:href => "#menu2", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
-                  Pages
+                  =t"pages"
                   %b.caret
                 %ul.dropdown-menu
                   =link_to t"general.manage.update_group"
-                  =link_to "move"
+                  =link_to t"general.buttons.move"
                     
     .container
       - flash.each do |name, msg|

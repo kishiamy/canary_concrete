@@ -6,7 +6,7 @@ es:
       move: Mover
       show: Mostrar
     manage:
-      manage_group:  Gestionar grupos
+      manage_groups: Gestionar grupos
       list_groups: Mostrar todos los grupos
       edit_group: Editar grupo
       user: Usario
@@ -32,4 +32,6 @@ es:
       update_page: Actualizar página
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 
-      forbiden: 'No tiene permiso para estar aquí'
+      forbiden: 'No tiene permiso para estar aquí' 
+  groups: Grupos
+  pages: Páginas
