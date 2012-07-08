@@ -23,7 +23,7 @@ body {
   background-image: linear-gradient(top, #013F7B 0%, #091C33 100%);
 }
 #admin-body{
-  background-color: $gray;
+  background-color: $navbarBackground;
 }
 .page-header {
   min-height: 30px;
@@ -53,6 +53,7 @@ body {
   background-color: $white; 
   padding: $gridGutterWidth;
   min-height: 100%; 
+  margin-top: 80px;
 }
 
 .row {
@@ -95,7 +96,7 @@ body {
 .nav-pills > li:first-of-type {
   margin-left: 0px !important;
 }
-
+    
 //footer styles
 footer {
   margin-top: $gridGutterWidth;

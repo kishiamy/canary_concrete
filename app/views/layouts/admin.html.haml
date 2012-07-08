@@ -3,10 +3,6 @@
   %head
     %meta{:charset => "utf-8"}
     %title Canary Concrete
-    %li
-      = link_to_unless_current t('languages.english'), locale: "en" 
-      |
-      = link_to_unless_current t('languages.spanish'), locale: "es"
     %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
     %meta{:content => "", :name => "description"}
     %meta{:content => "", :name => "author"}
@@ -19,9 +15,26 @@
     = csrf_meta_tags
   %body#admin-body
     -unless devise_controller?
-      %ul.hmenu
-        =render "devise/menu/registration_items"
-        =render "devise/menu/login_items"
+      .navbar 
+        .navbar-inner
+          .container
+            %ul.nav
+              =render "devise/menu/registration_items"
+              =render "devise/menu/login_items"
+              %li.dropdown
+                %a{:href => "#menu1", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
+                  Groups
+                  %b.caret
+                %ul.dropdown-menu
+                  =link_to t"general.manage.manage_groups" 
+              %li.dropdown
+                %a{:href => "#menu2", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
+                  Pages
+                  %b.caret
+                %ul.dropdown-menu
+                  =link_to t"general.manage.update_group"
+                  =link_to "move"
+                    
     .container
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
