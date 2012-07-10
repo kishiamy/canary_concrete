@@ -1,8 +1,9 @@
 .row-fluid
   .page-header
-    = link_to edit_page_path(@page), :class => 'btn btn-primary' do
-      %i.icon-pencil.icon-white
-      = t'general.buttons.edit'
+    -if current_user.try(:group).try(:admin?)
+      = link_to edit_page_path(@page), :class => 'btn btn-primary' do
+        %i.icon-pencil.icon-white
+        = t'general.buttons.edit'
     = link_to pages_path, :class => 'btn' do
       %i.icon-list-alt
       = t'general.manage.list_pages'
