@@ -25,3 +25,4 @@ config/database.yml
 # Ignore bin/ directory, generated from
 # $ bundle install --binstubs
 /bin/
+public/ckeditor_assets/

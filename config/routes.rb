@@ -1,5 +1,7 @@
 CanaryConcrete::Application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   root :to => redirect("/#{I18n.default_locale}/")
 
 

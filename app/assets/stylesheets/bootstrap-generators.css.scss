@@ -1,5 +1,5 @@
 @import "bootstrap-variables";
-@import "scss/bootstrap";
+@import "bootstrap";
 @import 'font-awesome';
 header{
   background-image:url('cab.png');
@@ -193,6 +193,9 @@ label {
       margin-left:7px;
     }
   }
+}
+#page_title {
+  width: 794px;
 }
 input[type="radio"] {
   display:none;

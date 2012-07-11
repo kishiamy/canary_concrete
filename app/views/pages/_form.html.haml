@@ -4,7 +4,7 @@
 
     .form-inputs
       = f.input :title
-      = f.input :content
+      = f.input :content, :as => :ckeditor, :input_html => { :toolbar => 'Full', :width => 804, :height => 400 }
       = f.input :page_id, :as => :hidden, :input_html => { :value => params[:page_id] } 
     .form-actions.control-group
       = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage"), :class => "btn-primary" 
