@@ -20,3 +20,11 @@ if User.count == 0
     user.save!
   end
 end
+
+if Page.count == 0
+  Page.new.tap do |page|
+    page.title = "Index"
+    page.content = "this web don't have content please edit this web and edit the content"
+    page.save!
+  end
+end

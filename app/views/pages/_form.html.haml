@@ -6,11 +6,13 @@
       = f.input :title
       = f.input :content
       = f.association :page
+
     =f.globalize_fields_for(form_locales[:locale]) do |g|
       .form-inputs
         = g.input :title, :label => form_locales[:title]
         = g.input :content, :label => form_locales[:content]
 
     
+      = f.input :page_id, :as => :hidden, :input_html => { :value => params[:page_id] } 
     .form-actions.control-group
-      = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage") 
+      = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage"), :class => "btn-primary" 

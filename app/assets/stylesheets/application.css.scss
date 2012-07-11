@@ -10,5 +10,7 @@
  *
  *= require_self
  *= require_bootstrap
- *= require_tree .
 */
+@import "bourbon";
+@import "bootstrap-generators";
+@import "bootstrap-variables";
