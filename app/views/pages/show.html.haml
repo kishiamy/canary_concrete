@@ -1,17 +1,17 @@
 .row-fluid
   .page-header
-    -if current_user.try(:group).try(:admin?)
+    -if user_signed_in? and current_user.group.admin?
       = link_to edit_page_path(@page), :class => 'btn btn-primary' do
         %i.icon-pencil.icon-white
         = t'general.buttons.edit'
-    = link_to pages_path, :class => 'btn' do
-      %i.icon-list-alt
-      = t'general.manage.list_pages'
+      = link_to pages_path, :class => 'btn' do
+        %i.icon-list-alt
+        = t'general.manage.list_pages'
     = breadcrumb(@page)
-  .span4.border-right-blue
+  .span3.border-right-blue
     - if @page.pages.first != nil
       %ul.sub-pages
         -@page.pages.each do |p|
           %li= link_to p.title, page_path(p)
-  .span8.float-right
+  .span9.float-right
     #content= @page.content.html_safe

@@ -4,6 +4,9 @@ gem 'rails', '3.2.2'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 gem "mysql2"
+#tranlates
+gem "globalize3"
+gem "batch_translations"
 
 group :test do
   gem "rspec-rails", :group => [:test, :development]
@@ -38,6 +41,10 @@ gem "haml"
 gem "haml-rails"
 #forms engine
 gem "simple_form"
+#javascript text editor
+gem "ckeditor", "3.7.1" 
+#upload files
+gem "paperclip"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
