@@ -3,7 +3,7 @@ class Page < ActiveRecord::Base
   belongs_to :page
 
   validate :page_move_to_correct_location, :on => :update
-
+  validate :page_name
   def family
     components = []
     if self.pages
@@ -38,5 +38,12 @@ class Page < ActiveRecord::Base
       end
     end
   end
-
+  
+  def page_name
+    if self.page == nil
+      if self.title.size > 11
+        errors[:title] <<("Title too long, maximum size 11 characters")
+      end
+    end
+  end
 end
