@@ -1,4 +1,4 @@
-.row-fluid
+.row-fluid-admin.row-fluid
   .content
     .page-header
       -if current_user.try(:group).try(:admin?)
@@ -9,5 +9,3 @@
     %ul.tree
       -@pages.each do |page|
         = render :partial =>'family', :locals => { :page => page }
-
-

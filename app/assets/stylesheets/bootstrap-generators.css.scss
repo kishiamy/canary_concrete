@@ -24,21 +24,6 @@ body, html{
     margin-right: 8px;
   }
 }
-// admin zone
-
-#admin-body {
-  color: $black; 
-  h1 {
-    color: $black;
-  }
-  footer {
-    color: $white;
-  }
-}
-.user{
-  right: 0px;
-}
-
 // jomjom styles
 .row-fluid {
   background-color: $sky-blue;
@@ -53,12 +38,6 @@ body, html{
       font-size: 80px;
     }
   }
-}
-.row-fluid-admin {
-  background-color: $white; 
-  padding: $gridGutterWidth;
-  min-height: 100%; 
-  margin-top: 80px;
 }
 
 .row {
@@ -364,3 +343,22 @@ ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
     }
   }
 } 
+// admin zone
+.row-fluid-admin {
+  background-color: $white; 
+  padding: $gridGutterWidth;
+}
+
+#admin-body {
+  color: $black; 
+  h1 {
+    color: $black;
+  }
+  footer {
+    color: $white;
+  }
+}
+.user{
+  right: 0px;
+}
+

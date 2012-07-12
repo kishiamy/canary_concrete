@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   before_filter :is_admin, :except => :show
+  layout 'admin', :except => :show
 
   # GET /pages
   # GET /pages.json
