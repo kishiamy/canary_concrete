@@ -28,14 +28,14 @@
                   =t"groups"
                   %b.caret
                 %ul.dropdown-menu
-                  =link_to (t"general.manage.manage_groups"), user_list_path
-                  =link_to I18n.t("group.listing_groups"), groups_path
+                  =link_to (t"group.change_user_group"), user_list_path
+                  =link_to t("group.listing_groups"), groups_path
               %li.dropdown
                 %a{:href => "#menu2", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
                   =t"pages"
                   %b.caret
                 %ul.dropdown-menu
-                  =link_to I18n.t("page.listing_pages"), pages_path
+                  =link_to t("page.listing_pages"), pages_path
             %ul.nav.pull-right
               =render "devise/menu/registration_items"
               =render "devise/menu/login_items"

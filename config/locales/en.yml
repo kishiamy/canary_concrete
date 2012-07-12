@@ -213,6 +213,7 @@ en:
     new_group:  New group  
     change_group: Change group 
     listing_groups: Groups
+    change_user_group: Change group of user
   languages:
     english: English
     spanish: Spanish

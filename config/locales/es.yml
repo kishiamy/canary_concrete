@@ -202,17 +202,18 @@ es:
     password: contraseña
     remember_me:  recordarme
     forgotten_password?:  no recuerdo mi contraseña
-  pages:
-    listing_pages: lista de páginas
+  page:
+    listing_pages: Lista de páginas
     name: nombre
     title: título
     content:  contenido
     new_page: nueva página
     add-sub-page: añadir subpágina
-  groups:
+  group:
     new_group:  nuevo grupo  
     change_group: cambiar grupo 
-    listing_groups: lista de grupos
+    listing_groups: Lista de grupos
+    change_user_group: Cambiar grupo del usuario
   languages:
     english: Inglés
     spanish: Español
