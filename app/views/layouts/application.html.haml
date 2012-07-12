@@ -18,10 +18,10 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    -# -unless devise_controller?
-    -#   %ul.hmenu
-    -#     =render "devise/menu/registration_items"
-    -#     =render "devise/menu/login_items"
+    -unless devise_controller?
+      %ul.hmenu
+        =render "devise/menu/registration_items"
+        =render "devise/menu/login_items"
     .container
       %div{:class => "text_login"}
         %p CANARY CONCRETE Fabríca y Comercializa
