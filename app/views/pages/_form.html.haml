@@ -4,15 +4,14 @@
 
     .form-inputs
       = f.input :title
-      = f.input :content
+      = f.input :content, :as => :ckeditor, :input_html => { :toolbar => 'Full', :width => 804, :height => 400 }
 
     =f.globalize_fields_for(form_locales[:locale]) do |g|
       .form-inputs
         = g.input :title, :label => form_locales[:title]
-        = g.input :content, :label => form_locales[:content]
+        = g.input :content, :label => form_locales[:content], :as => :ckeditor, :input_html => { :toolbar => 'Full', :width => 804, :height => 400 }
 
     
-      = f.input :content, :as => :ckeditor, :input_html => { :toolbar => 'Full', :width => 804, :height => 400 }
       = f.input :page_id, :as => :hidden, :input_html => { :value => params[:page_id] } 
     .form-actions.control-group
       = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage"), :class => "btn-primary" 
