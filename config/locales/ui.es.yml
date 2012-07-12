@@ -3,8 +3,9 @@ es:
     buttons:
       edit: Editar  
       delete: Borrar
-      move: Mover
+      move: Mover a otra sección
       show: Mostrar
+      add_sub_page: Añadir sub-sección
     manage:
       manage_groups: Gestionar grupos
       list_groups: Mostrar todos los grupos
@@ -30,6 +31,9 @@ es:
       back: Volver
       create_page: Crear página
       update_page: Actualizar página
+      moving_page: Moviendo sección
+      navigation_bar: Barra de navegación
+      update_section: Actializar ubicación
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 
       forbiden: 'No tiene permiso para estar aquí' 

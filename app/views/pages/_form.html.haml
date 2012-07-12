@@ -5,7 +5,6 @@
     .form-inputs
       = f.input :title
       = f.input :content
-      = f.association :page
-
+      = f.input :page_id, :as => :hidden, :input_html => { :value => params[:page_id] } 
     .form-actions.control-group
-      = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage") 
+      = f.button :submit, t(@page.new_record? ? "create_page" : "update_page", scope: "general.manage"), :class => "btn-primary" 
