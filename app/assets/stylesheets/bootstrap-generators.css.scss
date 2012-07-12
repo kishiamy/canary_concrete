@@ -7,6 +7,22 @@ header{
   height: 184px;
   width: 184px;
 }
+
+.text_login{
+  float:right;
+  margin-top:54px;
+  p{
+    text-align: center;
+    font-family: "Impact";
+    text-shadow: 4px 6px 4px black;
+    font-size: 23px;
+  }
+  .large{
+    padding-top:15px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+}
 .container {
   width:1024px;
 }
