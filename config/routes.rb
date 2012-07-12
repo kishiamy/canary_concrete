@@ -9,7 +9,10 @@ CanaryConcrete::Application.routes.draw do
     if Rails.env.test?  
       root :to => 'pages#index'
     else
-      root :to => 'pages#show', :id => Page.first.id
+      begin
+        root :to => 'pages#show', :id => Page.first.id
+        rescue ActiveRecord::StatementInvalid => e
+      end
     end
 
     devise_for :users
