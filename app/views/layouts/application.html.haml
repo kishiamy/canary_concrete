@@ -23,6 +23,10 @@
     -#     =render "devise/menu/registration_items"
     -#     =render "devise/menu/login_items"
     .container
+      %div{:class => "text_login"}
+        %p CANARY CONCRETE Fabríca y Comercializa
+        %p HORMIGONES, MORTEROS, ARIDOS Y CEMENTOS, con Plantas y Terminales en
+        %p{:class => "large"} GRAN CANARIA, FUERTEVENTURA Y TENERIFE
       %header
       %ul.nav-menu
         - Page.where(:page_id => nil).each do |j|
