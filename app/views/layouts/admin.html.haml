@@ -17,18 +17,12 @@
     = stylesheet_link_tag    "application"
     = javascript_include_tag "application"
     = csrf_meta_tags
-  %body
-    -# -unless devise_controller?
-    -#   %ul.hmenu
-    -#     =render "devise/menu/registration_items"
-    -#     =render "devise/menu/login_items"
+  %body#admin-body
+    -unless devise_controller?
+      %ul.hmenu
+        =render "devise/menu/registration_items"
+        =render "devise/menu/login_items"
     .container
-      %header
-      %ul.nav.nav-pills
-        %li
-          %a{:href => "#about"} About
-        %li
-          %a{:href => "#contact"} Contact
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
           %a.close{:href => "#", :data => {:dismiss => "alert"} } ×

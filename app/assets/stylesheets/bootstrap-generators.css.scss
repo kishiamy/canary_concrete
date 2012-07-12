@@ -30,7 +30,9 @@ body, html{
   background-repeat: no-repeat;
   background-color: #091C33;
 }
-
+#admin-body{
+  background-color: $gray;
+}
 .page-header {
   min-height: 30px;
   a.btn {
@@ -55,6 +57,11 @@ body, html{
       font-size: 80px;
     }
   }
+}
+.row-fluid-admin {
+  background-color: $white; 
+  padding: $gridGutterWidth;
+  min-height: 100%; 
 }
 
 .row {

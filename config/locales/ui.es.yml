@@ -7,7 +7,7 @@ es:
       show: Mostrar
       add_sub_page: Añadir sub-sección
     manage:
-      manage_groups:  Gestionar grupos
+      manage_group:  Gestionar grupos
       list_groups: Mostrar todos los grupos
       edit_group: Editar grupo
       user: Usario

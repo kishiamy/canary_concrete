@@ -17,7 +17,6 @@ es:
         title: 'Título'
         content: 'Contenido'
         page: 'Página'
-        submit: 'asdfasdf'
     hints:
       username: 'Nombre de usuario para acceder'
       password: 'Sin caracteres especiales, por favor.'
