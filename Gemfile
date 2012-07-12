@@ -41,6 +41,10 @@ gem "haml"
 gem "haml-rails"
 #forms engine
 gem "simple_form"
+#javascript text editor
+gem "ckeditor", "3.7.1" 
+#upload files
+gem "paperclip"
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
