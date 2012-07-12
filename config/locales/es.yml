@@ -116,9 +116,15 @@ es:
       odd: debe ser impar
       record_invalid: ! 'La validación falló: %{errors}'
       taken: ya está en uso
-      too_long: es demasiado largo (%{count} caracteres máximo)
-      too_short: es demasiado corto (%{count} caracteres mínimo)
-      wrong_length: no tiene la longitud correcta (%{count} caracteres exactos)
+      too_long:
+        one: es demasiado larga (el máximo es 1 caracter)
+        other: es demasiado larga (el máximo son %{count} caracteres)
+      too_short:
+        one: es demasiado corta (el mínimo es 1 caracter)
+        other: es demasiado corto (el mínimo son %{count} caracteres)
+      wrong_length:
+        one: longitud incorrecta (debe ser 1 caracter)
+        other: longitud incorrecta (deben ser %{count} caracteres)
     template:
       body: ! 'Se encontraron problemas con los siguientes campos:'
       header:
