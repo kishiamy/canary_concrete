@@ -13,4 +13,4 @@
         -@page.pages.each do |p|
           %li= link_to p.title, page_path(p)
   .span8.float-right
-    #content= @page.content
+    #content= @page.content.html_safe
