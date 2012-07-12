@@ -1,10 +1,11 @@
 .row-fluid-admin.row-fluid
   .content
     .page-header
-      = link_to groups_path, :class => "btn" do
-        %i.icon-list-alt
-        = t'general.manage.list_group'
-      %h1= t'general.manage.new_group'
+     -if current_user.try(:group).try(:admin?)
+       = link_to groups_path, :class => "btn" do
+          %i.icon-list-alt
+          = t'general.manage.list_group'
+        %h1= t'general.manage.new_group'
 
     = render 'form' 
     = link_to t('general.manage.back'), groups_path, :class => "btn"

@@ -14,7 +14,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body#admin-body
-    -unless devise_controller?
+    -if user_signed_in? and current_user.group.admin? 
       .navbar 
         .navbar-inner
           .container
