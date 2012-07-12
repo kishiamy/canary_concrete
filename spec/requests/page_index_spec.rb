@@ -31,4 +31,18 @@ describe "pages index" do
       page.should have_content("You do not have permission to be here!")
     end
   end
+
+  describe "creating a new page in two languages" do
+     before do
+      @admin = FactoryGirl.create(:admin)
+      @page = FactoryGirl.create(:page, title: "New", content: "This page is new")
+      login @admin
+      visit page_path
+      find("a[href='en/pages/id']").click
+      find("a[href='es/pages/id']").click
+    end
+    it "check both languages are created correctly" do 
+      Page.find_by_title("New").title.should == "Nuevo"
+    end
+  end
 end
