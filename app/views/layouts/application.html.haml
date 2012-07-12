@@ -35,7 +35,15 @@
             %ul.nav.pull-right
               =render "devise/menu/registration_items"
               =render "devise/menu/login_items"
-
+    -else 
+      .navbar 
+        .navbar-inner
+          .container
+            %ul.nav
+              %li
+                =link_to_unless_current t('languages.english'), locale: "en"
+              %li
+                =link_to_unless_current t('languages.spanish'), locale: "es"
     .container
       %header
       %ul.nav-menu
