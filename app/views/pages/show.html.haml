@@ -1,6 +1,6 @@
 .row-fluid
   .page-header
-    -if user_signed_in? and current_user.group.admin?
+    -if is_admin?
       = link_to edit_page_path(@page), :class => 'btn btn-primary' do
         %i.icon-pencil.icon-white
         = t'general.buttons.edit'
