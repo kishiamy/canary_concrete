@@ -7,7 +7,7 @@ en:
       show: Show
       add_sub_page: Add sub-page
     manage:
-      manage_groups:  Manage groups
+      manage_groups: Manage groups
       list_groups: List all groups
       edit_group: Editing group
       user: User
@@ -37,3 +37,5 @@ en:
     controllers:
       notice: 'Group was successfully updated.'
       forbiden: 'You do not have permission to be here!'
+  groups: Groups
+  pages: Pages
