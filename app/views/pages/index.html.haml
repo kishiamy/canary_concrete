@@ -1,12 +1,11 @@
-.row-fluid
+.row-fluid-admin.row-fluid
   .content
     .page-header
-      = link_to new_page_path, :class => 'btn btn-primary' do
-        %i.icon-plus.icon-white
-        = t'general.manage.new_page'
+      -if current_user.try(:group).try(:admin?)
+        = link_to new_page_path, :class => 'btn btn-primary' do
+          %i.icon-plus.icon-white
+          = t'general.manage.new_page'
       %h1= t'general.manage.list_of_pages'
     %ul.tree
       -@pages.each do |page|
         = render :partial =>'family', :locals => { :page => page }
-
-

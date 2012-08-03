@@ -30,9 +30,6 @@ body, html{
   background-repeat: no-repeat;
   background-color: #091C33;
 }
-#admin-body{
-  background-color: $gray;
-}
 .page-header {
   min-height: 30px;
   a.btn {
@@ -57,11 +54,6 @@ body, html{
       font-size: 80px;
     }
   }
-}
-.row-fluid-admin {
-  background-color: $white; 
-  padding: $gridGutterWidth;
-  min-height: 100%; 
 }
 
 .row {
@@ -148,7 +140,7 @@ body, html{
 .nav-pills > li:first-of-type {
   margin-left: 0px;
 }
-
+    
 //footer styles
 footer {
   margin-top: $gridGutterWidth;
@@ -370,3 +362,28 @@ ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
     }
   }
 } 
+// admin zone
+.row-fluid-admin {
+  background-color: $white; 
+  padding: $gridGutterWidth;
+}
+
+#admin-body {
+  color: $black; 
+  h1 {
+    color: $black;
+  }
+  footer {
+    color: $white;
+  }
+  label {
+    color: $black;
+  }
+}
+.user{
+  right: 0px;
+}
+.navbar .nav > li {
+  line-height: 38px;
+  color: $linkColor;
+}
