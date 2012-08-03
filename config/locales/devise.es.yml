@@ -54,12 +54,17 @@ es:
       back: 'Volver'
       sign_up: 'Registrar'
       signed_up: "¡Bienvenido/a! Ha sido registrado con éxito."
+      signed_up_but_unconfirmed: 'Se ha enviado un email con un enlace de confirmacion a su email. Por favor, haga click en el mensaje para activar su cuenta.'
       signed_up_but_inactive: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta no ha sido activada todavía."
       signed_up_but_locked: "Ha sido registrado correctamente. Quizás no pueda acceder debido a que su cuenta está bloqueda."
       updated: "Ha actualizado su cuenta con éxito."
       update_needs_confirmation: "Ha actualizado su cuenta con éxito, pero necesitamos verificar su email. Por favor, compruebe su email y haga click sobre el enlace de confirmación para finalizar la confirmación de su email."
       destroyed: "¡Adiós!, su cuenta ha sido cancelada con éxita. Esperamos verle pronto."
       password_confirmation: 'Repita contraseña'
+      user:
+        signed_up_but_not_approved: 'Ha sido registrado satisfactoriamente, pero su cuenta todavía no ha sido aprobada por el administrador.'
+      failure:
+        not_approved: 'Su cuenta no ha sido aprobada todavía por el administrador.'
     unlocks:
       resend_unlock: 'Reenviar instrucciones de desbloqueo'
       links: 'enlaces'
