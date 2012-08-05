@@ -7,11 +7,11 @@ class AdminController < ApplicationController
 
   def update_activation
     @user = User.find(params[:id])
-    @user.approved = params[:user][:approved]
+    @user.approved = params[:approved]
 
     respond_to do |format|
       if @user.save!
-        format.html { redirect_to manage_activations_path, notice: t('general.controllers.notice') }
+        format.html { redirect_to manage_activations_path, notice: t('general.controllers.notice_user') }
         format.json { head :no_content }
       else
         format.html { render action: "manage_activations" }

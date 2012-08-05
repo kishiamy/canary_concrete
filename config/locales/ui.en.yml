@@ -38,6 +38,7 @@ en:
       activate: Activate
     controllers:
       notice: 'Group was successfully updated.'
+      notice_user: 'User was succesfully activated'
       forbiden: 'You do not have permission to be here!'
   groups: Groups
   pages: Pages
