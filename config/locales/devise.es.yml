@@ -49,8 +49,8 @@ es:
       need_password: 'Se necesita su contraseña actual para confirmar los cambios'
       update: 'Actualizar'
       cancel: 'Cancelar mi cuenta'
-      unhappy: '¿Insatisfecho?'
       sure: '¿Está seguro?'
+      unhappy: '¿Insatisfecho?'
       back: 'Volver'
       sign_up: 'Registrar'
       signed_up: "¡Bienvenido/a! Ha sido registrado con éxito."

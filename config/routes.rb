@@ -10,7 +10,7 @@ CanaryConcrete::Application.routes.draw do
       root :to => 'pages#index'
     else
       begin
-        root :to => 'pages#show', :id => Page.first.id
+        # root :to => 'pages#show', :id => Page.first.id
         rescue ActiveRecord::StatementInvalid => e
       end
     end
@@ -26,7 +26,8 @@ CanaryConcrete::Application.routes.draw do
 
     match "admin/groups" => "admin#manage_groups", :as => :user_list
     match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
-
+    match "admin/users/manage_activations" => "admin#manage_activations", :as => :manage_activations
+    match "admin/user/:id/update_activation" => "admin#update_activation", :via => :put, :as => :edit_activation
     match '*dummy', to: "error#error_404"
   end
   # Capture invalid pages
