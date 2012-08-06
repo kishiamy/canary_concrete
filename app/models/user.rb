@@ -7,5 +7,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me, :approved
   belongs_to :group
-  validates :approved, :presence => true
+  before_create :default_approved
+  def default_approved
+    self.approved = "false"
+  end
 end
