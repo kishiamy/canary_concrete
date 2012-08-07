@@ -36,6 +36,12 @@
                   %b.caret
                 %ul.dropdown-menu
                   =link_to t("page.listing_pages"), pages_path
+              %li.dropdown
+                %a{:href => "#menu3", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
+                  =t"general.manage.users"
+                  %b.caret
+                %ul.dropdown-menu
+                  =link_to t("general.manage.activate"), manage_activations_path
             %ul.nav.pull-right
               =render "devise/menu/registration_items"
               =render "devise/menu/login_items"
