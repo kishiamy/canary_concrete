@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :approved
+  attr_accessible :email, :password, :password_confirmation, :remember_me
   belongs_to :group
   before_create :default_approved
   def default_approved
