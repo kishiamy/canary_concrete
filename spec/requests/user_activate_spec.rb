@@ -3,11 +3,10 @@ require 'spec_helper'
 describe "activate user" do
     before do
       @user = FactoryGirl.create(:user, email: "ejemplo@ejemplo.com", password: "ejemploejemplo")
-      visit page_path(@user)
+      visit user_session_path(@user)
+      login @user
     end
     it "activation with successfully" do
-      current_path.should == page_path(@page)
-      page.should have_content("Test show")
-      page.should have_content("this is a content")
+      current_path.should == pages_path
     end
 end
