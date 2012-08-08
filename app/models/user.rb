@@ -9,6 +9,6 @@ class User < ActiveRecord::Base
   belongs_to :group
   before_create :default_approved
   def default_approved
-    self.approved = "false"
+    self.approved = false
   end
 end
