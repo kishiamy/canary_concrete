@@ -34,7 +34,7 @@ class AdminController < ApplicationController
     @user.group_id = params[:user][:group_id]
 
     respond_to do |format|
-      if @user.save!
+      if @user.save
         format.html { redirect_to user_list_path, notice: t('general.controllers.notice') }
         format.json { head :no_content }
       else
