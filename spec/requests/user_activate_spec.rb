@@ -6,6 +6,6 @@ describe "activate user" do
       login @user
     end
     it "successfully" do
-      current_path.should have_content("You do not have permission to be here!")
+      current_path.should == user_session_path
     end
 end
