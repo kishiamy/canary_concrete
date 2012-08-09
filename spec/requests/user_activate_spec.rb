@@ -8,13 +8,12 @@ describe "activate user" do
       login @admin
       click_on "Users"
       click_on "Activate" 
-      find(:id, "#{@user.approved}").click
+      find(:id, "approved", "#{@user.approved}").click
       click_on "Activate"
       logout 
-      visit user_session_path
       login @user
     end
-    it "not successfylly" do
-      current_path.should == user_session_path
+    it "successfully" do
+      page.should have_content("You do not have permission to be here!")
     end
 end

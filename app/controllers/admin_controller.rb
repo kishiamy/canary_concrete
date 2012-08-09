@@ -10,7 +10,7 @@ class AdminController < ApplicationController
     @user.approved = params[:approved]
 
     respond_to do |format|
-      if @user.save!
+      if @user.save
         format.html { redirect_to manage_activations_path, notice: t('general.controllers.notice_user') }
         format.json { head :no_content }
       else
