@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
 
   def default_approved
     self.approved = false
+    true
   end
   def active_for_authentication?
     super && approved?
