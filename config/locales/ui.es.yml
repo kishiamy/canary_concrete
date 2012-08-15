@@ -7,7 +7,7 @@ es:
       show: Mostrar
       add_sub_page: Añadir sub-sección
     manage:
-      manage_group:  Gestionar grupos
+      manage_groups: Gestionar grupos
       list_groups: Mostrar todos los grupos
       edit_group: Editar grupo
       user: Usario
@@ -33,7 +33,9 @@ es:
       update_page: Actualizar página
       moving_page: Moviendo sección
       navigation_bar: Barra de navegación
-      update_section: Actializar ubicación
+      update_section: Actualizar ubicación
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 
-      forbiden: 'No tiene permiso para estar aquí'
+      forbiden: 'No tiene permiso para estar aquí' 
+  groups: Grupos
+  pages: Páginas

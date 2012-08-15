@@ -202,17 +202,18 @@ en:
     password: Password
     remember_me:  Remember me
     forgotten_password?:  Forgotten password?
-  pages:
+  page:
     listing_pages: Pages
     name: Name
     title: Title
     content:  Content
     new_page: New page
     add-sub-page: Add sub-page
-  groups:
+  group:
     new_group:  New group  
     change_group: Change group 
     listing_groups: Groups
+    change_user_group: Change group of user
   languages:
     english: English
     spanish: Spanish
