@@ -11,6 +11,6 @@ describe "edit group" do
       click_on 'Update group'
     end
     it "check the name" do
-      Group.find_by_name("Without permission").name.should == "Without permission"
+      Group.find_by_name("Without permission").name.should have_content == "Without permission"
     end
 end
