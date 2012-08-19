@@ -7,7 +7,8 @@ class Page < ActiveRecord::Base
   scope :roots, where(page_id: nil)
 
   validate :page_move_to_correct_location, :on => :update
-
+  validate :page_name
+  
   def family
     components = []
     if self.pages
@@ -42,5 +43,10 @@ class Page < ActiveRecord::Base
       end
     end
   end
-
+  
+  def page_name
+    if self.page == nil
+      validates_length_of :title, :maximum => 11 
+    end
+  end
 end
