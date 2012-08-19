@@ -7,8 +7,4 @@ class CreatePageTranslations < ActiveRecord::Migration
       migrate_data: true
     })
   end
-
-  def down
-    Page.drop_translation_table! migrate_data: true
-  end
 end

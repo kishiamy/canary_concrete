@@ -1,0 +1,16 @@
+.row-fluid-admin
+  .content
+    .page-header
+      %h1= t'general.manage.manage_users_activation'
+      %table.table_form
+        %tr
+          %th= t'general.manage.user'
+          %th= t'general.manage.activate'
+        - @users.each do |user|
+          %tr
+            %td
+              = user.email 
+            %td
+              = simple_form_for user, :url => edit_activation_path(user) do |form|
+                = check_box_tag(:approved, value: 1, checked: false, options: {})
+                = form.button :submit, t('general.manage.activate')

@@ -7,7 +7,6 @@ class CreatePages < ActiveRecord::Migration
 
       t.timestamps
     end
-    Page.create_translation_table! :title => :string, :content => :text
   end
   def down
     drop_table :pages

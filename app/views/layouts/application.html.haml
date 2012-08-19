@@ -14,7 +14,7 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
   %body
-    -if user_signed_in? and current_user.group.admin? 
+    -if is_admin?
       .navbar 
         .navbar-inner
           .container
@@ -36,6 +36,12 @@
                   %b.caret
                 %ul.dropdown-menu
                   =link_to t("page.listing_pages"), pages_path
+              %li.dropdown
+                %a{:href => "#menu3", :class => "dropdown-toggle", :'data-toggle' => "dropdown"}
+                  =t"general.manage.users"
+                  %b.caret
+                %ul.dropdown-menu
+                  =link_to t("general.manage.activate"), manage_activations_path
             %ul.nav.pull-right
               =render "devise/menu/registration_items"
               =render "devise/menu/login_items"
@@ -50,9 +56,9 @@
                 =link_to_unless_current t('languages.spanish'), locale: "es"
     .container
       %div{:class => "text_login"}
-        %p CANARY CONCRETE Fabríca y Comercializa
-        %p HORMIGONES, MORTEROS, ARIDOS Y CEMENTOS, con Plantas y Terminales en
-        %p{:class => "large"} GRAN CANARIA, FUERTEVENTURA Y TENERIFE
+        %p CANARY CONCRETE Fabrica y comercializa
+        %p hormigones, morteros, áridos y cementos, con plantas y terminales en
+        %p{:class => "large"} Gran Canaria, Fuerteventura y Tenerife
       %header
       %ul.nav-menu
         - Page.where(:page_id => nil).each do |j|
