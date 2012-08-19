@@ -22,7 +22,7 @@ es:
     sessions:
       new:
         sign_in: 'Acceder'
-        sign_up: 'Registrarse'
+        sign_up: 'Registrar'
       signed_in: "Acceso realizado con éxito."
       signed_out: "Salida con éxito"
       remember: 'Recordarme'
