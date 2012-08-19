@@ -34,8 +34,11 @@ en:
       moving_page: Moving page
       navigation_bar: Navigation bar
       update_section: Update section
+      manage_users_activation: Manage users activation
+      activate: Activate
     controllers:
       notice: 'Group was successfully updated.'
+      notice_user: 'User was succesfully activated'
       forbiden: 'You do not have permission to be here!'
   groups: Groups
   pages: Pages

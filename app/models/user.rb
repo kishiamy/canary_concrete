@@ -7,9 +7,8 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me
   belongs_to :group
-  before_save :assign_group_default
-
-  def assign_group_default
-    self.group ||= Group.find_by_name('Client') 
+  before_create :default_approved
+  def default_approved
+    self.approved = false
   end
 end

@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
 
   protected
     def is_admin
-      unless user_signed_in? and current_user.group.admin?
+      unless user_signed_in? and current_user.group.try(:admin?)
         raise AdminUserIsRequired
       end
     end
