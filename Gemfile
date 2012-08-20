@@ -25,7 +25,8 @@ end
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
-  gem 'bootstrap-generators'
+#  gem 'bootstrap-generators'
+  gem 'bootstrap-sass', '~> 2.0.4.0'
   gem 'bourbon'
   gem 'uglifier', '>= 1.0.3'
   gem 'font-awesome-sass-rails'

@@ -15,3 +15,5 @@
 //= require ckeditor/init
 //= require bootstrap.min
 //= require_tree .
+//
+//= require bootstrap
