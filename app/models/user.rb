@@ -10,5 +10,6 @@ class User < ActiveRecord::Base
   before_create :default_approved
   def default_approved
     self.approved = false
+    true
   end
 end

@@ -1,5 +1,5 @@
-@import "bootstrap-variables";
 @import "bootstrap";
+@import "bootstrap-variables";
 @import 'font-awesome';
 header{
   background-image:url('cab.png');
@@ -375,7 +375,7 @@ ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
     color: $black;
   }
   footer {
-    color: $white;
+    color: $textColor;
   }
   label {
     color: $black;
