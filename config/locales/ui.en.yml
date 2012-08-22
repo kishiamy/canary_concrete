@@ -21,9 +21,9 @@ en:
       users: Users
       no_users_group: There aren't users in this group
       update_group: Update group
-      list_pages: List all pages
+      list_pages: Pages
       edit_page: Edit page
-      new_page: New page
+      new_page: New 
       list_of_pages: List of pages
       title: Title
       page_father: Page father

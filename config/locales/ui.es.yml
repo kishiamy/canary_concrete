@@ -21,9 +21,9 @@ es:
       users: Usuarios
       no_users_group: No existen usuarios en este grupo
       update_group: Actualizar grupo
-      list_pages: Mostrar todas las páginas
+      list_pages: Páginas
       edit_page: Editar página
-      new_page: Nueva página
+      new_page: Nueva
       list_of_pages: Lista de páginas
       title: Título
       page_father: Página padre
@@ -34,7 +34,7 @@ es:
       moving_page: Moviendo sección
       navigation_bar: Barra de navegación
       update_section: Actualizar ubicación
-      manage_users_activation: Gestión de la activación de los usuarios
+      manage_users_activation: Activación de los usuarios
       activate: Activar
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 

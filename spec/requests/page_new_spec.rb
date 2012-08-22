@@ -18,3 +18,4 @@ describe 'globalize' do
     Page.find_by_title("Test").translations.last.title.should == "Probando"
     Page.find_by_title("Test").translations.last.content.should == "Pruebaaaa"
   end
+end

@@ -9,6 +9,7 @@ module HelperMethods
 
   def logout
     click_link 'Logout'
+    sleep 3
   end
 
   def wait_until_we_see(element)
