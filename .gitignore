@@ -30,6 +30,4 @@ public/ckeditor_assets/pictures/*.bmp
 public/ckeditor_assets/pictures/*.png
 public/ckeditor_assets/pictures/*.git
 public/ckeditor_assets/pictures/*.jpge
-
-
-
+public/assets/*

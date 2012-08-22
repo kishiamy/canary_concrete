@@ -233,7 +233,7 @@ DEPENDENCIES
   bourbon
   capybara
   capybara-firebug
-  ckeditor (= 3.7.1)
+  ckeditor
   coffee-rails (~> 3.2.1)
   database_cleaner
   debugger
