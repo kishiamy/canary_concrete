@@ -1,6 +1,7 @@
 @import "bootstrap-variables";
 @import "bootstrap";
 @import 'font-awesome';
+
 header{
   background-image:url('cab.png');
   background-repeat: no-repeat;
@@ -11,6 +12,7 @@ header{
 .text_login{
   float:right;
   margin-top:54px;
+  color:  $textColor;
   p{
     text-align: center;
     font-family: "Impact";
@@ -375,7 +377,7 @@ ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
     color: $black;
   }
   footer {
-    color: $white;
+    color: $textColor;
   }
   label {
     color: $black;

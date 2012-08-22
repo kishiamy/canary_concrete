@@ -23,9 +23,10 @@ end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
+  gem 'sass-rails', '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-generators'
+  gem 'bootstrap-sass'
   gem 'bourbon'
   gem 'uglifier', '>= 1.0.3'
   gem 'font-awesome-sass-rails'
@@ -42,7 +43,7 @@ gem "haml-rails"
 #forms engine
 gem "simple_form"
 #javascript text editor
-gem "ckeditor", "3.7.1" 
+gem "ckeditor" 
 #upload files
 gem "paperclip"
 # To use ActiveModel has_secure_password
