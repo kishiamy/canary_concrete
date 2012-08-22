@@ -251,7 +251,7 @@ DEPENDENCIES
   paperclip
   rails (= 3.2.2)
   rspec-rails
-  sass-rails
+  sass-rails (~> 3.2.3)
   selenium-webdriver
   simple_form
   uglifier (>= 1.0.3)
