@@ -8,7 +8,14 @@ class Page < ActiveRecord::Base
 
   validate :page_move_to_correct_location, :on => :update
   validate :page_name
-  
+  validate :lenght_pages_without_parents
+
+  def lenght_pages_without_parents
+    if self.page.parent.blank? 
+      validates_length_of :parent_id, :maximum => 8 
+    end                        
+  end
+
   def family
     components = []
     if self.pages
