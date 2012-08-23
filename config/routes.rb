@@ -4,16 +4,8 @@ CanaryConcrete::Application.routes.draw do
 
   root :to => redirect("/#{I18n.default_locale}/")
 
-
   scope ":locale", locale: /#{I18n.available_locales.join('|')}/ do
-    if Rails.env.test?  
-      root :to => 'pages#index'
-    else
-      begin
-        root :to => 'pages#show', :id => Page.first.id
-        rescue ActiveRecord::StatementInvalid => e
-      end
-    end
+    root :to => 'pages#show', :id => 'first'
 
     devise_for :users
 
