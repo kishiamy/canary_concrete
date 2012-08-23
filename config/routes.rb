@@ -6,14 +6,7 @@ CanaryConcrete::Application.routes.draw do
 
 
   scope ":locale", locale: /#{I18n.available_locales.join('|')}/ do
-    if Rails.env.test?  
-      root :to => 'pages#index'
-    else
-      begin
-        root :to => 'pages#show', :id => 'first'
-        rescue ActiveRecord::StatementInvalid => e
-      end
-    end
+    root :to => 'pages#show', :id => 'first'
 
     devise_for :users
 
