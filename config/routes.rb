@@ -10,7 +10,7 @@ CanaryConcrete::Application.routes.draw do
       root :to => 'pages#index'
     else
       begin
-        root :to => 'pages#show', :id => Page.first.id
+        root :to => 'pages#show', :id => 'first'
         rescue ActiveRecord::StatementInvalid => e
       end
     end
