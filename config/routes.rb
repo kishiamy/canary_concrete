@@ -4,7 +4,6 @@ CanaryConcrete::Application.routes.draw do
 
   root :to => redirect("/#{I18n.default_locale}/")
 
-
   scope ":locale", locale: /#{I18n.available_locales.join('|')}/ do
     root :to => 'pages#show', :id => 'first'
 
