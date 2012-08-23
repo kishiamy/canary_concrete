@@ -11,9 +11,9 @@ class Page < ActiveRecord::Base
   validate :lenght_pages_without_parents
 
   def lenght_pages_without_parents
-    if self.page.parent.blank? 
-      validates_length_of :parent_id, :maximum => 8 
-    end                        
+    if self.page.blank? && Page.where(:page_id=>nil).count >= 7
+      errors.add(:page_id, I18n. t("errors.messages.maximum"))
+    end
   end
 
   def family
@@ -46,7 +46,7 @@ class Page < ActiveRecord::Base
   def page_move_to_correct_location
     if page.present?
       if page.parents.include?(self)
-        errors[:Page] << ("Page don't can move to own branch")
+        errors.add(:Page, I18n.t("errors.messages.move"))
       end
     end
   end
