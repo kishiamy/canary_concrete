@@ -4,7 +4,7 @@ describe 'globalize' do
     @admin = FactoryGirl.create(:admin)
     login @admin
     visit pages_path
-    click_on ("New page")
+    click_on ("New")
 
     fill_in "Title", :with => "Test"
     fill_in "Content", :with => "this is a test"

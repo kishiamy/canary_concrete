@@ -10,6 +10,5 @@ describe "show group" do
     end
     it "check name" do
       current_path.should == group_path(@group)
-      # find("h1",  :text => "Group name #{@group.name}" )
     end
 end
