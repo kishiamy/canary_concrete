@@ -1,4 +1,7 @@
 class Page < ActiveRecord::Base
+  MAX_PARENTS = 7
+  TITLE_LENGTH = 11
+
   has_many :pages
   belongs_to :page
   has_many :translations
@@ -11,7 +14,7 @@ class Page < ActiveRecord::Base
   validate :lenght_pages_without_parents
 
   def lenght_pages_without_parents
-    if self.page.blank? && Page.where(:page_id=>nil).count >= 7
+    if self.page.blank? && Page.where(:page_id=>nil).count >= MAX_PARENTS
       errors.add(:page_id, I18n. t("errors.messages.maximum"))
     end
   end
@@ -53,7 +56,7 @@ class Page < ActiveRecord::Base
   
   def page_name
     if self.page == nil
-      validates_length_of :title, :maximum => 11 
+      validates_length_of :title, :maximum => TITLE_LENGTH
     end
   end
 end
