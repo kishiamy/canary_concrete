@@ -14,7 +14,7 @@ class Page < ActiveRecord::Base
   validate :lenght_pages_without_parents
 
   def lenght_pages_without_parents
-    if self.page.blank? && Page.where(:page_id=>nil).count >= MAX_PARENTS
+    if self.page.blank? && Page.where(:page_id=>nil).count >= MAX_PARENTS && (new_record? || page_id_changed?)
       errors.add(:page_id, I18n. t("errors.messages.maximum"))
     end
   end
