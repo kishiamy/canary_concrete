@@ -11,6 +11,6 @@ describe "edit page" do
       click_on "Update page"
     end
     it "check the title" do
-      Page.find_by_title("Updated").title.should == "Updated"
+      Page.find_by_title("Update").title.should == "Update"
     end
 end

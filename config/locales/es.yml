@@ -125,7 +125,7 @@ es:
       wrong_length:
         one: longitud incorrecta (debe ser 1 caracter)
         other: longitud incorrecta (deben ser %{count} caracteres)
-      maximum: no puede crear más páginas principales
+      maximum: Tiene el máximo de paginas principales, mueva o elimine una si desea añadir una pagina principal nueva.
       move: la página no puede moverse a su propia rama
     template:
       body: ! 'Se encontraron problemas con los siguientes campos:'
