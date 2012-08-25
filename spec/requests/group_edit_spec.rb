@@ -3,7 +3,7 @@ require 'spec_helper'
 describe "edit group" do
     before do
       @admin = FactoryGirl.create(:admin)
-      @group = FactoryGirl.create(:group, name: "Extras")
+      @group = FactoryGirl.create(:group)
       login @admin
       visit groups_path
       find("a[href='#{edit_group_path(@group)}']").click
@@ -11,6 +11,6 @@ describe "edit group" do
       click_on 'Update group'
     end
     it "check the name" do
-      Group.find_by_name("Without permission").name.should have_content == "Without permission"
+      Group.find_by_name("Without permission").name.should == "Without permission"
     end
 end

@@ -125,6 +125,8 @@ en:
       wrong_length:
         one: is the wrong length (should be 1 character)
         other: is the wrong length (should be %{count} characters)
+      maximum: You have the maximum number of main pages, please remove or move one main page to create new one.
+      move: "Page can't be moved to it's own branch"
     template:
       body: ! 'There were problems with the following fields:'
       header:
@@ -209,6 +211,7 @@ en:
     content:  Content
     new_page: New page
     add-sub-page: Add sub-page
+    contact: Contact
   group:
     new_group:  New group  
     change_group: Change group 
