@@ -7,10 +7,10 @@ describe "edit page" do
       login @admin
       visit pages_path
       find("a[href='#{edit_page_path(@page)}']").click
-      fill_in "Title", :with => "Page updated"
+      fill_in "Title", :with => "Updated"
       click_on "Update page"
     end
     it "check the title" do
-      Page.find_by_title("Page updated").title.should == "Page updated"
+      Page.find_by_title("Update").title.should == "Update"
     end
 end

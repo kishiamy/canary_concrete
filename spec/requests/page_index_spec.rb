@@ -35,14 +35,23 @@ describe "pages index" do
   describe "creating a new page in two languages" do
      before do
       @admin = FactoryGirl.create(:admin)
-      @page = FactoryGirl.create(:page, title: "New", content: "This page is new")
       login @admin
-      visit page_path
-      find("a[href='en/pages/id']").click
-      find("a[href='es/pages/id']").click
+      visit pages_path
+      click_on('New')
+      fill_in 'Title', :with => 'testing'
+      page.execute_script("$('#cke_page_content table iframe').contents().find('p').text('It is a test')")
+      sleep 1
+      fill_in "page_translations_attributes_1_title", :with => 'testeando'
+      page.execute_script("$('#cke_page_translations_attributes_1_content table iframe').contents().find('p').text('esto es un test')")
+      sleep 1
+      click_on 'Create page'
     end
     it "check both languages are created correctly" do 
-      Page.find_by_title("New").title.should == "Nuevo"
+      I18n.locale = :en
+      eng = Page.find_by_title("testing").id
+      I18n.locale = :es
+      es = Page.find_by_title("testeando").id
+      eng.should == es
     end
   end
 end

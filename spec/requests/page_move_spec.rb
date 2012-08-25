@@ -23,7 +23,6 @@ describe "moving page" do
     end
 
     it "check if move to parent" do
-      current_path.should == move_page_path(@child)
       find(:id, "#{@mother.id}").click
       click_on "Update section"
       wait_until_we_see(".content")

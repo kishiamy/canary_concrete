@@ -4,6 +4,7 @@ FactoryGirl.define do
     u.password_confirmation   { "testing" }
     u.email                   { Faker::Internet.email }
     u.group        { |group| group.association(:group) }
+    u.approved      false
   end
   factory :admin, :parent => :user do |a|
     a.password                  "adminadmin" 
