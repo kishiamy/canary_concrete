@@ -6,7 +6,8 @@ describe "show group" do
       @group = FactoryGirl.create(:group, name: "Extras")
       login @admin
       visit groups_path
-      find("a",  :text => @group.name ).click
+      sleep 1
+      find("a[href='#{group_path(@group)}']").click
     end
     it "check name" do
       current_path.should == group_path(@group)

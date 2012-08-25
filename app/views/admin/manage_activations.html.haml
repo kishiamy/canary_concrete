@@ -12,5 +12,5 @@
               = user.email 
             %td
               = simple_form_for user, :url => edit_activation_path(user) do |form|
-                = check_box_tag(:approved, value: 1, checked: false, options: {})
+                = check_box_tag(:approved, 1)
                 = form.button :submit, t('general.manage.activate')
