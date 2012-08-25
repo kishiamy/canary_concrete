@@ -125,6 +125,8 @@ es:
       wrong_length:
         one: longitud incorrecta (debe ser 1 caracter)
         other: longitud incorrecta (deben ser %{count} caracteres)
+      maximum: no puede crear más páginas principales
+      move: la página no puede moverse a su propia rama
     template:
       body: ! 'Se encontraron problemas con los siguientes campos:'
       header:
@@ -209,6 +211,7 @@ es:
     content:  contenido
     new_page: nueva página
     add-sub-page: añadir subpágina
+    contact: Contacto
   group:
     new_group:  nuevo grupo  
     change_group: cambiar grupo 

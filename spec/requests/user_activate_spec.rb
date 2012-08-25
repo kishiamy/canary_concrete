@@ -3,17 +3,14 @@ require 'spec_helper'
 describe "activate user" do
     before do
       @admin = FactoryGirl.create(:admin)
-      @admin.update_attribute(:approved, true)
-      @user = FactoryGirl.create(:user)
+      @user = FactoryGirl.create(:user, approved: false)
       login @admin
-      click_on "Users"
+      visit manage_activations_path
       click_on "Activate" 
-      find(:id, "approved", "#{@user.approved}").click
-      click_on "Activate"
-      logout 
-      login @user
+      check("approved")
+      find('.btn').click
     end
     it "successfully" do
-      page.should have_content("You do not have permission to be here!")
+      User.find(@user.id).approved.should == true
     end
 end
