@@ -19,11 +19,11 @@ es:
       list_group: Lista de grupos 
       group_name: Nombre del grupo
       users: Usuarios
-      update_group: Actualizar grupo
       no_users_group: No existen usuarios en este grupo
-      list_pages: Mostrar todas las páginas
+      update_group: Actualizar grupo
+      list_pages: Páginas
       edit_page: Editar página
-      new_page: Nueva página
+      new_page: Nueva
       list_of_pages: Lista de páginas
       title: Título
       page_father: Página padre
@@ -34,8 +34,11 @@ es:
       moving_page: Moviendo sección
       navigation_bar: Barra de navegación
       update_section: Actualizar ubicación
+      manage_users_activation: Activación de los usuarios
+      activate: Activar
     controllers:
       notice: 'El grupo ha sido actualizado con éxito.' 
+      notice_user: 'El usuario ha sido activado con éxito'
       forbiden: 'No tiene permiso para estar aquí' 
   groups: Grupos
   pages: Páginas

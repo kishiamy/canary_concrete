@@ -1,6 +1,7 @@
 @import "bootstrap-variables";
 @import "bootstrap";
 @import 'font-awesome';
+
 header{
   background-image:url('cab.png');
   background-repeat: no-repeat;
@@ -11,6 +12,7 @@ header{
 .text_login{
   float:right;
   margin-top:54px;
+  color:  $textColor;
   p{
     text-align: center;
     font-family: "Impact";
@@ -185,7 +187,6 @@ h1 {
 h2 {
   color: $textColor; 
   font-size: $title-text; 
-  text-transform:uppercase;
 }
 h3 {
   color: $textColor; 
@@ -210,7 +211,7 @@ label {
   }
 }
 #page_title {
-  width: 794px;
+  width: 530px;
 }
 input[type="radio"] {
   display:none;
@@ -335,13 +336,15 @@ ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
   width: 293px;
   background-color: $sky-blue;
   padding-left: 10px;
+  padding-top:  20px;
   footer{
     margin-bottom: 20px;
     height:1px;
   }
   form{
     position:relative;
-    margin-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 60px;
     .actions{
       .btn{
         position:absolute;
@@ -374,7 +377,7 @@ ul.subpages_form > li:last-of-type, ul.tree_form > li:last-of-type {
     color: $black;
   }
   footer {
-    color: $white;
+    color: $textColor;
   }
   label {
     color: $black;

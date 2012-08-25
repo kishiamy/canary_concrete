@@ -17,6 +17,7 @@ if User.count == 0
     user.email = "admin@admin.com"
     user.password = "adminadmin"
     user.group = Groups[:admin]
+    user.approved = true
     user.save!
   end
 end

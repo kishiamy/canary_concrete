@@ -21,9 +21,9 @@ en:
       users: Users
       no_users_group: There aren't users in this group
       update_group: Update group
-      list_pages: List all pages
+      list_pages: Pages
       edit_page: Edit page
-      new_page: New page
+      new_page: New 
       list_of_pages: List of pages
       title: Title
       page_father: Page father
@@ -34,8 +34,11 @@ en:
       moving_page: Moving page
       navigation_bar: Navigation bar
       update_section: Update section
+      manage_users_activation: Manage users activation
+      activate: Activate
     controllers:
       notice: 'Group was successfully updated.'
+      notice_user: 'User was succesfully activated'
       forbiden: 'You do not have permission to be here!'
   groups: Groups
   pages: Pages
