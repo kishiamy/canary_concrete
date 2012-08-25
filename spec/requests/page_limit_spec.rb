@@ -13,6 +13,6 @@ describe "checking limit of main pages" do
     click_on "Create page"
   end
   it 'count until 8' do
-    page.should have_content("You have the maximun number of main pages, please remove one main page or move to create new main page.")
+    page.should have_content("You have the maximum number of main pages, please remove or move one main page to create new one.")
   end
 end
