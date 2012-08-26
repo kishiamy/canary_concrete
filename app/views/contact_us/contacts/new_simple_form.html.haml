@@ -1,0 +1,13 @@
+.row-fluid
+  .content
+    .page-header
+      %h1= t('contact_us.contacts.new.contact_us')
+    .span12
+      = simple_form_for @contact, :url => contacts_path do |f| 
+        .form-inputs
+          = f.input :name, :label => t('contact_us.contacts.new.name') if ContactUs.require_name 
+          = f.input :email, :label => t('contact_us.contacts.new.email') 
+          = f.input :subject, :label => t('contact_us.contacts.new.subject') if ContactUs.require_subject 
+          = f.input :message, :as => :text, :label => t('contact_us.contacts.new.message') 
+        .form-actions.control-group
+          = f.button :submit,t("contact_us.contacts.new.submit")

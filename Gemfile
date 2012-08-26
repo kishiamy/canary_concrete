@@ -46,6 +46,8 @@ gem "simple_form"
 gem "ckeditor" 
 #upload files
 gem "paperclip"
+#contact page
+gem 'contact_us', '~> 0.4.0.beta'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

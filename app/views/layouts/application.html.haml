@@ -64,8 +64,7 @@
         - Page.where(:page_id => nil).each do |j|
           %li=link_to j.title, page_path(j)
         %li
-          %a{:href => "#contact"}
-            =t("page.contact") 
+          =link_to t("page.contact"), contact_path 
       - flash.each do |name, msg|
         = content_tag :div, :class => "alert #{name == :error ? "alert-error" : "alert-success" }" do
           %a.close{:href => "#", :data => {:dismiss => "alert"} } ×

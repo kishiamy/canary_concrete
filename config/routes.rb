@@ -21,7 +21,9 @@ CanaryConcrete::Application.routes.draw do
     match "admin/groups/:id/edit" => "admin#update", :via => :put, :as => :edit_user_group
     match "admin/users/manage_activations" => "admin#manage_activations", :as => :manage_activations
     match "admin/user/:id/update_activation" => "admin#update_activation", :via => :put, :as => :edit_activation
+    match "contact" => "contact_us/contacts#new", :as => :contact
     match '*dummy', to: "error#error_404"
+
   end
   # Capture invalid pages
   match '*dummy', to: "error#error_404", locale: I18n.default_locale.to_s
